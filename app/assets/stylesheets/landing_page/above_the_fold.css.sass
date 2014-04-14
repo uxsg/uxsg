@@ -56,8 +56,12 @@ header#header
       font-family: $body-font-family
       font-size: 3.125em
       color: $beige
+      @media #{$small-only}
+        font-size: 2em
     .description
       font-size: 1.25em
+      @media #{$small-only}
+        font-size: 1em
 
   .ticket-marketing
     +grid-row
