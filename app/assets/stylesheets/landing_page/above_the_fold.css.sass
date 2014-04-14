@@ -51,6 +51,8 @@ header#header
     margin-bottom: 1em
     text-align: center
     color: $beige
+    @media #{$small-only}
+      display: none
 
     .name
       font-family: $body-font-family
@@ -84,6 +86,10 @@ header#header
           background: $green
           font-size: 1.5em
           font-weight: normal
+          p.description
+            margin-bottom: 0
+            @media #{$medium-up}
+              display: none
         td
           color: $brown
           background: $beige
