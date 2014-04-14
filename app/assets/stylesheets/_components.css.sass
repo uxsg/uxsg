@@ -7,3 +7,20 @@
     &:hover
       color: $yellow
       background: $brown
+
+a.social
+  width: 55%
+  display: block
+  margin: 0.5em auto
+  padding: 0.7em 0.7em 0.7em 70px
+  border-radius: 10px
+  color: #fff
+  font-size: 24px
+  font-weight: bold
+  @media #{$small-only}
+    width: inherit
+
+  &.facebook
+    background: image-url('icon-40px-facebook.png') no-repeat 15px center #43609c
+  &.twitter
+    background: image-url('icon-40px-twitter.png') no-repeat 15px center #55aded
