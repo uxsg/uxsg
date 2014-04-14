@@ -31,6 +31,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'capybara', github: 'jnicklas/capybara'
   gem 'database_cleaner', '~> 1.2.0'
 end
 
