@@ -34,4 +34,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Make X-Frame-Options permissive for development purposes
+  config.action_dispatch.default_headers.merge!({'X-Frame-Options' => 'ALLOWALL'})
 end
