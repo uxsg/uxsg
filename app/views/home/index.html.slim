@@ -40,14 +40,14 @@
           tr
             td Full conference programme access
           tr
-            td.cta = link_to "Register", "https://uxsg-conference-2014.gevme.com/", class: "yellow button"
+            td.cta = link_to "Register", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register'))
 
       .testimonials
         blockquote
           p The first morning, seeing all the other people with the same passion for UX as myself, felt like I was getting a chance to go back to design school again.
           cite Michael Thompson
 
-        = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", class: "highlights"
+        = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", class: "highlights", onclick: %Q(ga('send', 'event', 'UXSGarang', '2013 Highlights'))
 
 .below-the-fold
   .newsletter
@@ -70,8 +70,8 @@
     .description
       h3.title Connect with us
       p Connect with us on Facebook and Twitter for the latest updates on our meetups and conferences
-      a.social.facebook href="//www.facebook.com/groups/uxsingapore/" Visit Facebook Group
-      a.social.twitter href="//www.twitter.com/uxsingapore" Follow @uxsingapore
+      = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Facebook'))
+      = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Twitter'))
 
   footer
     p UXSG &copy; 2014 All Rights Reserved.
