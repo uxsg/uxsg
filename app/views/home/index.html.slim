@@ -7,45 +7,49 @@
         h1.site-title
           span.hide UXSG
           |  conference
-        h3.conference-dates 1-3 October 2014
+        h3.conference-dates 1&ndash;3 October 2014
 
   .tickets
     .ticket-description
-      h2.name Ultra Excited & Super Garang tickets!
-      p.description Only the garang (gung-ho) need apply because we are in the early stages of planning
+      h2.name Feeling Ultra Excited & Super Garang?
+      p.description We've got just the ticket for you!
+      p.description
+       | Limited release of UXSGarang tickets available now for those
+       em  garang
+       |  (gung-ho) enough to register ahead of the conference programme's confirmation
 
     .ticket-marketing
       .ticket-details
         table
           tr
             td.count
-              p Limited tickets!
+              p For a limited time only!
           tr
             th
               | Ultra Excited & Super Garang tickets
-              p.description Only the garang (gung-ho) need apply because we are in the early stages of planning
+              p.description Limited release of "UXSGarang" tickets for those garang (gung-ho) enough to register ahead of the conference programme's confirmation
           tr
             td.pricing
               span.price S$700
               span.tax  excl. GST
               span.discount  instead of S$1,000 regular ticket pricing
           tr
-            td Specially designed conference t-shirt
+            td Specially-designed conference t-shirt for UXSGarang sign-ups only
+          tr
+            td Special pass to beat the coffee queue
           tr
             td Priority workshop selection upon programme confirmation
           tr
             td Priority registration on conference day
           tr
-            td Special pass to beat the coffee queue
-          tr
-            td Access to the full conference programme (but of course)
+            td Access to the full conference programme (but of course!)
           tr
             td.cta = link_to "Register", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register'))
 
       .testimonials
         blockquote
           p The first morning, seeing all the other people with the same passion for UX as myself, felt like I was getting a chance to go back to design school again.
-          cite Michael Thompson
+          cite Michael Thompson, delighted UXSG Conference 2013 attendee
 
         = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", class: "highlights", onclick: %Q(ga('send', 'event', 'UXSGarang', '2013 Highlights'))
 
@@ -53,7 +57,7 @@
   .newsletter
     .subscribe
       h3.title Not ready to commit?
-      p Subscribe to our mailing list and we'll update you as speakers and workshops are finalised
+      p Subscribe to our mailing list and we'll update you as the conference programme is finalised
 
     .subscribe-form
       form action="http://uxsg.us2.list-manage1.com/subscribe/post?u=72d5a562514b342cdfd9ab556&amp;id=1757eedbad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""
@@ -69,7 +73,7 @@
   .connect
     .description
       h3.title Connect with us
-      p Connect with us on Facebook and Twitter for the latest updates on our meetups and conferences
+      p Join our Facebook group or follow us on Twitter for the latest updates on our meetups and happenings
       = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Facebook'))
       = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Twitter'))
 
