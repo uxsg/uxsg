@@ -1,0 +1,85 @@
+.above-the-fold
+  header#header
+    .masthead
+      .logo-container
+        .logo
+      .title
+        h1.site-title
+          span.hide UXSG
+          |  conference
+        h3.conference-dates 1&ndash;3 October 2014
+
+  .tickets
+    .ticket-description
+      h2.name Feeling Ultra Excited & Super Garang?
+      p.description We've got just the ticket for you!
+      p.description
+       | Limited release of UXSGarang tickets available now for those
+       em  garang
+       |  (gung-ho) enough to register ahead of the conference programme's confirmation
+
+    .ticket-marketing
+      .ticket-details
+        table
+          tr
+            td.count
+              p For a limited time only!
+          tr
+            th
+              | Ultra Excited & Super Garang tickets
+              p.description Limited release of "UXSGarang" tickets for those garang (gung-ho) enough to register ahead of the conference programme's confirmation
+          tr
+            td.pricing
+              span.price S$700
+              span.tax  excl. GST
+              span.discount  instead of S$1,000 regular ticket pricing
+          tr
+            td Specially-designed conference t-shirt for UXSGarang sign-ups only
+          tr
+            td Special pass to beat the coffee queue
+          tr
+            td Priority workshop selection upon programme confirmation
+          tr
+            td Priority registration on conference day
+          tr
+            td Access to the full conference programme (but of course!)
+          tr
+            td.cta
+              - if Time.now.in_time_zone('Singapore') < Time.new(2014,4,16,20,30,0, "+08:00")
+                = link_to "Registration opens at 8.30pm", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register (Closed)'))
+              - else
+                = link_to "Register", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register'))
+
+      .testimonials
+        blockquote
+          p The first morning, seeing all the other people with the same passion for UX as myself, felt like I was getting a chance to go back to design school again.
+          cite Michael Thompson, delighted UXSG Conference 2013 attendee
+
+        = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", class: "highlights", onclick: %Q(ga('send', 'event', 'UXSGarang', '2013 Highlights'))
+
+.below-the-fold
+  .newsletter
+    .subscribe
+      h3.title Not ready to commit?
+      p Subscribe to our mailing list and we'll update you as the conference programme is finalised
+
+    .subscribe-form
+      form action="http://uxsg.us2.list-manage1.com/subscribe/post?u=72d5a562514b342cdfd9ab556&amp;id=1757eedbad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""
+        .row
+          .small-12.medium-8.columns
+            input#mce-EMAIL.email type="email" value="" name="EMAIL" placeholder="Enter your email" required=""
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            div style="position: absolute; left: -5000px;"
+              input type="text" name="b_72d5a562514b342cdfd9ab556_1757eedbad" value=""
+          .small-12.medium-4.columns
+            input#mc-embedded-subscribe.button.yellow type="submit" value="Subscribe" name="subscribe"
+
+  .connect
+    .description
+      h3.title Connect with us
+      p Join our Facebook group or follow us on Twitter for the latest updates on our meetups and happenings
+      = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Facebook'))
+      = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Twitter'))
+
+  footer
+    p UXSG &copy; 2014 All Rights Reserved.

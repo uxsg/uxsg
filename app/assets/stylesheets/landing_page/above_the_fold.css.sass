@@ -1,0 +1,182 @@
+.above-the-fold
+  background: image-url("hero-bg.jpg")
+  padding: 3em 0
+  @media #{$small-only}
+    padding-top: 1em
+
+header#header
+  margin-bottom: 2em
+
+  .masthead
+    +grid-row
+
+    .logo-container
+      @media #{$small-up}
+        +grid-column(12)
+      @media #{$medium-up}
+        +grid-column(6, $collapse: true)
+
+    .logo
+      background: image-url("logo-uxsg-horizontal.png") center center no-repeat
+      @media #{$small-up}
+        margin: 0 auto
+        height: 117px
+        background-size: contain
+      @media #{$medium-up}
+        margin: 0 0 0 auto
+        width: 282px
+        height: 81px
+        background-size: 282px 81px
+
+    .title
+      @media #{$small-up}
+        +grid-column(12)
+        text-align: center
+      @media #{$medium-up}
+        +grid-column(6, $collapse: true)
+        text-align: left
+        padding-left: 1em
+      h1, h3
+        margin: 0
+        line-height: 1.2em
+        color: $beige
+      .site-title
+        margin-top: .1em
+        font-size: 1.875em
+      .conference-dates
+        font-size: 1.875em
+        font-weight: bold
+
+.tickets
+  .ticket-description
+    +grid-row
+    margin-bottom: 1em
+    text-align: center
+    color: $beige
+    @media #{$small-only}
+      display: none
+
+    .name
+      font-family: $body-font-family
+      font-size: 3.125em
+      color: $beige
+      @media #{$small-only}
+        font-size: 2em
+    .description
+      font-size: 1.25em
+      @media #{$small-only}
+        font-size: 1em
+
+  .ticket-marketing
+    +grid-row
+
+    .ticket-details
+      @media #{$small-up}
+        +grid-column(12)
+      @media #{$medium-up}
+        +grid-column(6)
+
+      table
+        width: 100%
+        border: none
+        border-spacing: 0
+        border-radius: .3125em
+        th
+          padding-top: 0.5em
+          padding-bottom: 1em
+          color: $beige
+          background: $green
+          font-size: 1.5em
+          font-weight: normal
+          p.description
+            margin-top: 1em
+            margin-bottom: 0
+            @media #{$medium-up}
+              display: none
+        td
+          color: $brown
+          background: $beige
+          font-size: 1.125rem
+          text-align: center
+          padding-top: 0.75em
+          padding-bottom: 0.75em
+        td.count
+          font-size: 0.875rem
+          border-radius: .3125em .3125em 0 0
+          padding-top: 0
+          padding-bottom: 0
+          background: $green
+          p
+            width: 16em
+            margin: 0 auto
+            padding: 0 0.5em 0
+            border-radius: 0 0 .3125em .3125em
+            color: $green
+            background: $dark-green
+            font-size: .857142857em
+            font-weight: bold
+            text-transform: uppercase
+        td.pricing
+          background: $light-beige
+          padding-top: 1em
+          padding-bottom: 1em
+          %pricing
+            color: $red
+            font-weight: bold
+          span.price
+            @extend %pricing
+            font-size: 1.333333333em
+          span.tax
+            @extend %pricing
+            font-size: .777777778em
+          span.discount
+            display: block
+            font-size: .777777778em
+        td.cta
+          border-radius: 0 0 .3125em .3125em
+          .button
+            width: 70%
+            font-size: 1.25em
+            text-transform: uppercase
+
+    .testimonials
+      text-align: center
+      @media #{$small-up}
+        +grid-column(12)
+      @media #{$medium-up}
+        +grid-column(6)
+
+      blockquote
+        margin-bottom: 3.5em
+        border: none
+        padding: 0 2em
+        @media #{$small-up}
+          margin-top: 2em
+          padding: 0
+        @media #{$medium-up}
+          margin-top: 8em
+
+        %quote-type
+          font-size: 1.25em
+          color: $beige
+        > p
+          @extend %quote-type
+        > cite
+          @extend %quote-type
+          font-style: italic
+
+        %quote-marks
+          color: rgba(246, 245, 221, 0.5)
+          font-size: 2em
+          line-height: 0.5em
+        > p:before
+          @extend %quote-marks
+          content: "\201c"
+        > p:after
+          @extend %quote-marks
+          content: "\201d"
+
+      a.highlights
+        color: $green
+        font-size: 1.25em
+        text-decoration: underline
