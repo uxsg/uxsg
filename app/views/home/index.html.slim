@@ -44,7 +44,11 @@
           tr
             td Access to the full conference programme (but of course!)
           tr
-            td.cta = link_to "Register", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register'))
+            td.cta
+              - if Time.now.in_time_zone('Singapore') < Time.new(2014,4,16,20,30,0, "+08:00")
+                = link_to "Registration opens at 8.30pm", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register (Closed)'))
+              - else
+                = link_to "Register", "https://uxsg-conference-2014.gevme.com/", class: "yellow button", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Register'))
 
       .testimonials
         blockquote
