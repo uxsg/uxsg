@@ -6,14 +6,12 @@ ruby '2.1.2'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Use Slim for HTML templates
-gem 'slim-rails', '~> 0.1'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+
+gem 'slim-rails',   '~> 2.1.4' # Use Slim for HTML templates
+gem 'sass-rails',   '~> 4.0.3' # Use SCSS for stylesheets
+gem 'uglifier',     '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
+gem 'coffee-rails', '~> 4.0.0' # Use CoffeeScript for .js.coffee assets and views
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
