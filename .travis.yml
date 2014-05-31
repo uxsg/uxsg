@@ -4,4 +4,4 @@ before_script:
 bundler_args: "--without doc production"
 language: ruby
 rvm:
-  - 2.1.1
+  - 2.1.2
