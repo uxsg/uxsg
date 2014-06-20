@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root "home#index"
+
+  get "/privacy" => "home#privacy", as: :privacy
+  get "/terms" => "home#terms", as: :terms
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
