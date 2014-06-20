@@ -1,0 +1,13 @@
+.contain-to-grid.fixed
+  nav.top-bar data-topbar=""
+    ul.title-area
+      li.site-title
+        = link_to root_path, title: "UXSG Conference 2014" do
+          .logo UXSG
+          .conference
+            | conference
+            span.year 2014
+    section.top-bar-section
+      ul.right
+        li = link_to "home", root_path
+        li = link_to "call for submissions", "//docs.google.com/forms/d/1ExyKGJKDm_NgvofryK_njWf5Mhff7h4Wh4uBKmdzRDg/viewform", onclick: %Q(ga('send', 'event', 'Menu', 'Desktop Nav', 'Call for Submissions'))

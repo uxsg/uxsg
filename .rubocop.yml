@@ -1,2 +1,22 @@
+AllCops:
+  Include:
+    - config.ru
+    - Gemfile
+    - Rakefile
+  Exclude:
+    - db/schema.rb
+
+AssignmentInCondition:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
 StringLiterals:
   EnforcedStyle: double_quotes
