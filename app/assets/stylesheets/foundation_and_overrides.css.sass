@@ -1186,8 +1186,8 @@ $body-font-family: "Oxygen", sans-serif
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #000
+$topbar-bg: rgba(0,0,0,0.5)
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1198,7 +1198,7 @@ $body-font-family: "Oxygen", sans-serif
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
+$topbar-dropdown-bg: none
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: $font-weight-normal;
@@ -1208,15 +1208,15 @@ $body-font-family: "Oxygen", sans-serif
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
+$topbar-link-color-hover: $teal
+$topbar-link-color-active: $teal
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(14)
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg: $topbar-bg;
+$topbar-link-bg: none
 // $topbar-link-bg-color-hover: #555555;
-// $topbar-link-bg-hover: #272727;
+$topbar-link-bg-hover: none
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
@@ -1298,8 +1298,9 @@ $body-font-family: "Oxygen", sans-serif
 // $range-slider-handle-cursor: pointer;
 
 @import foundation/components/buttons
-@import foundation/components/tables
 @import foundation/components/forms
 @import foundation/components/grid
+@import foundation/components/tables
+@import foundation/components/top-bar
 @import foundation/components/type
 @import foundation/components/visibility
