@@ -1,12 +1,59 @@
-.button
-  border-radius: .625em
+body
+  letter-spacing: 1px
 
+.infobox
+  .header
+    background-color: $teal
+    border-radius: .3125em .3125em 0 0
+    padding: 0.5rem 1rem
+    > *
+      color: $white
+      margin: 0
+  .content
+    background-color: rgba(0,0,0,0.5)
+    border-radius: 0 0 .3125em .3125em
+    color: $white
+    padding: 0.5rem 1rem 1rem
+    > *:last-child
+      margin-bottom: 0
+  &.no-header .content
+    border-radius: .3125em
+
+.button
+  border-radius: .3125em
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
   &.yellow
     color: $brown
     background: $yellow
     &:hover
       color: $yellow
       background: $brown
+
+.intro
+  color: $header-font-color
+  font-size: 1.5em
+  line-height: 1.5em
+
+blockquote
+  border: none
+  padding: 0
+  %quote-type
+    color: $white
+  %quote-marks
+    color: rgba(246, 245, 221, 0.5)
+    line-height: 0.5em
+  > p
+    @extend %quote-type
+  > p:before
+    @extend %quote-marks
+    content: "\201c"
+  > p:after
+    @extend %quote-marks
+    content: "\201d"
+  > cite
+    @extend %quote-type
+    font-style: italic
 
 a.social
   width: 55%
