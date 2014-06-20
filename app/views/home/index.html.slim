@@ -1,9 +1,9 @@
 .hero-section
   .row
-    .large-7.columns
+    .medium-6.columns
       h4 1 &ndash; 3 october 2014
       h1 impact through design
-    .large-5.columns
+    .medium-5.columns
       .infobox
         header.header
           h2 call for submissions
@@ -14,26 +14,26 @@
 .main-section
   section.tickets
     .row
-      .large-12.columns
+      .medium-12.columns
         h2 early bird tickets
     .row
-      .large-7.columns
+      .medium-6.columns
         p.intro When will early bird tickets go on sale?
         p Regular early bird ticket sales will open on 30 June.
         p Subscribe to our mailing list and we'll update you as the conference programme is finalised.
         .subscribe-form
           form action="http://uxsg.us2.list-manage1.com/subscribe/post?u=72d5a562514b342cdfd9ab556&amp;id=1757eedbad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate=""
            .row
-             .large-8.columns
+             .medium-8.columns
                input#mce-EMAIL.email type="email" value="" name="EMAIL" placeholder="Enter your email" required=""
                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                div style="position: absolute; left: -5000px;"
                  input type="text" name="b_72d5a562514b342cdfd9ab556_1757eedbad" value=""
-             .large-4.columns
+             .medium-4.columns
                input#mc-embedded-subscribe.button.expand type="submit" value="Notify Me" name="subscribe"
-      .large-5.columns
+      .medium-5.columns
         .infobox.no-header
-          .content
+          .content.dark-bg
             blockquote
               p The first morning, seeing all the other people with the same passion for UX as myself, felt like I was getting a chance to go back to design school again.
               cite Michael Thompson, delighted UXSG Conference 2013 attendee
@@ -45,5 +45,8 @@
       .large-12.columns
         h2 connect with us
         p.intro Follow us for the latest updates on our meetups and happenings
+    .row
+      .medium-6.columns
         = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'Home Page', 'Social', 'Facebook'))
+      .medium-6.columns
         = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'Home Page', 'Social', 'Twitter'))
