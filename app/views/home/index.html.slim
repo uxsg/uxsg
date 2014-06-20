@@ -9,7 +9,7 @@
           h2 call for submissions
         .content
           p We're looking for 12 passionate practitioners to deliver informative and practical sessions for our attendees based on this year's conference theme, "Impact Through Design".
-          = link_to "Submit proposal", "//docs.google.com/forms/d/1ExyKGJKDm_NgvofryK_njWf5Mhff7h4Wh4uBKmdzRDg/viewform", class: "button yellow expand"
+          = link_to "Submit proposal", "//docs.google.com/forms/d/1ExyKGJKDm_NgvofryK_njWf5Mhff7h4Wh4uBKmdzRDg/viewform", class: "button yellow expand", onclick: %Q(ga('send', 'event', 'Home Page', 'Call for Submissions'))
 
 .main-section
   section.tickets
@@ -38,12 +38,12 @@
               p The first morning, seeing all the other people with the same passion for UX as myself, felt like I was getting a chance to go back to design school again.
               cite Michael Thompson, delighted UXSG Conference 2013 attendee
 
-            .call-to-action = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", onclick: %Q(ga('send', 'event', 'UXSGarang', '2013 Highlights'))
+            .call-to-action = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", onclick: %Q(ga('send', 'event', 'Home Page', '2013 Highlights'))
 
   section.connect
     .row
       .large-12.columns
         h2 connect with us
         p.intro Follow us for the latest updates on our meetups and happenings
-        = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Facebook'))
-        = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'UXSGarang', 'Social', 'Twitter'))
+        = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'Home Page', 'Social', 'Facebook'))
+        = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'Home Page', 'Social', 'Twitter'))
