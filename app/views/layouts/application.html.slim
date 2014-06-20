@@ -13,10 +13,8 @@ html lang="en"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
-  body class="#{controller.controller_name} #{controller.action_name}"
-    = render partial: "layouts/navigation"
-    == yield
-    = render partial: "layouts/footer"
+  body class="#{controller.controller_name} #{controller.action_name} #{request.variant.first.to_s if request.variant.present?}"
+    = render partial: "layouts/main"
 
     = render partial: "layouts/google_analytics"
     = render partial: "layouts/uservoice"
