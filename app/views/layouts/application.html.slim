@@ -16,5 +16,7 @@ html lang="en"
   body class="#{controller.controller_name} #{controller.action_name}"
     = render partial: "layouts/navigation"
     == yield
+    = render partial: "layouts/footer"
+
     = render partial: "layouts/google_analytics"
     = render partial: "layouts/uservoice"
