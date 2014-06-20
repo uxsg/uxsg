@@ -17,4 +17,9 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+var initializePage = function() {
+  $(document).foundation();
+}
+
+$(document).ready(initializePage);
+$(document).on('page:change', initializePage);
