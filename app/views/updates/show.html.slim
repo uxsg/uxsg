@@ -1,3 +1,22 @@
-h1 = @article.title
+article.article
+  .row
+    .large-12.columns
+      h5.category Updates
+      h1.title = @article.title
 
-div == @article.content
+  .content-container
+    .row
+      .large-12.columns
+        .meta = "UXSG | #{@article.created_at.strftime('%e %b')}"
+    .row
+      .large-7.columns
+        .row.lead-image-container
+          .large-12.columns
+            = image_tag @article.lead_image, class: "lead-image"
+
+        .row
+          .large-12.columns
+            .content == @article.content
+
+      .large-3.columns
+        h3 Other updates
