@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "home#index"
 
   get "/privacy" => "home#privacy", as: :privacy
   get "/terms" => "home#terms", as: :terms
+
+  get "/sign-in" => "sessions#new", as: :sign_in
+  resource :sign_in, path: "sign-in", controller: :sessions, only: :create
+
+  delete "/sign-out" => "sessions#destroy", as: :sign_out
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,7 +8,11 @@ gem "rails", "4.1.1"
 # Use postgresql as the database for Active Record
 gem "pg"
 
-# Detect mobile brwoser agents
+gem "sorcery"
+
+gem "rails_admin"
+
+# Detect mobile browser agents
 gem "mobile-fu"
 
 gem "slim-rails",   "~> 2.1.4" # Use Slim for HTML templates

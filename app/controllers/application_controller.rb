@@ -7,6 +7,12 @@ class ApplicationController < ActionController::Base
 
   before_action :set_device_variant
 
+  # Overwrite the method sorcery calls when it detects a non-authenticated request.
+  def not_authenticated
+    # Make sure that we reference the route from the main app.
+    redirect_to main_app.sign_in_path
+  end
+
   private
 
   def set_device_variant
