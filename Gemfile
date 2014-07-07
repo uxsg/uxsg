@@ -57,6 +57,7 @@ end
 group :test do
   gem "capybara", "~> 2.3"
   gem "database_cleaner", "~> 1.2.0"
+  gem "shoulda-matchers"
 end
 
 # Use ActiveModel has_secure_password
