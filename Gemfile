@@ -10,6 +10,9 @@ gem "pg"
 
 gem "sorcery"
 
+gem "carrierwave"
+gem "fog"
+
 gem "friendly_id", "~> 5.0.0"
 
 gem "rails_admin"
