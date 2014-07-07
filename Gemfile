@@ -51,11 +51,11 @@ group :development do
 end
 
 group :development, :test do
-  gem "rspec-rails", github: "rspec/rspec-rails"
+  gem "rspec-rails", "~> 3.0"
 end
 
 group :test do
-  gem "capybara", github: "jnicklas/capybara"
+  gem "capybara", "~> 2.3"
   gem "database_cleaner", "~> 1.2.0"
 end
 
