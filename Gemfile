@@ -8,6 +8,8 @@ gem "rails", "4.1.1"
 # Use postgresql as the database for Active Record
 gem "pg"
 
+gem "sorcery"
+
 gem "rails_admin"
 
 # Detect mobile browser agents
