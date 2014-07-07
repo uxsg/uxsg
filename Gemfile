@@ -10,6 +10,8 @@ gem "pg"
 
 gem "sorcery"
 
+gem "friendly_id", "~> 5.0.0"
+
 gem "rails_admin"
 
 # Detect mobile browser agents
