@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 feature "landing page" do
   scenario "user visits landing page" do

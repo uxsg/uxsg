@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 
 describe "routes for landing page", type: :routing do
   it "routes to home page" do

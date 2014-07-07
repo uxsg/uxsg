@@ -10,6 +10,11 @@ gem "pg"
 
 gem "sorcery"
 
+gem "carrierwave"
+gem "fog"
+
+gem "friendly_id", "~> 5.0.0"
+
 gem "rails_admin"
 
 # Detect mobile browser agents
@@ -31,6 +36,7 @@ gem "turbolinks"
 gem "jbuilder", "~> 2.0"
 
 gem "foundation-rails"
+gem "bootstrap-wysihtml5-rails", "0.3.1.24"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -51,12 +57,14 @@ group :development do
 end
 
 group :development, :test do
-  gem "rspec-rails", github: "rspec/rspec-rails"
+  gem "dotenv-rails"
+  gem "rspec-rails", "~> 3.0"
 end
 
 group :test do
-  gem "capybara", github: "jnicklas/capybara"
+  gem "capybara", "~> 2.3"
   gem "database_cleaner", "~> 1.2.0"
+  gem "shoulda-matchers"
 end
 
 # Use ActiveModel has_secure_password
