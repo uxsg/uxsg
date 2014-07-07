@@ -42,14 +42,15 @@ $base-line-height: 166.7%
 // Global
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default
-// $font-weight-bold: bold !default
+$font-weight-normal: normal !default
+$font-weight-bold: bold !default
+$font-weight-light: 300 !default
 
 // We use these to control various global styles
 $body-bg: $background
 // $body-font-color: #222;
 $body-font-family: "Oxygen", sans-serif
-// $body-font-weight: $font-weight-normal;
+$body-font-weight: $font-weight-light
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
@@ -163,9 +164,9 @@ $header-font-family: "Varela Round", sans-serif
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: $font-weight-normal;
+$paragraph-font-weight: $font-weight-light
 // $paragraph-font-size: 1rem;
-// $paragraph-line-height: 1.6;
+$paragraph-line-height: $base-line-height
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;

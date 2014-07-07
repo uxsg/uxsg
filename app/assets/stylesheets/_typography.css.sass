@@ -1,17 +1,46 @@
-body
+body, p
   line-height: $base-line-height
+  letter-spacing: rem-calc(1)
+
+.type-intro
+  font-weight: $font-weight-normal
+  font-size: rem-calc(24)
+  line-height: rem-calc(36)
 
 h1
+  font-size: rem-calc(72)
+  letter-spacing: rem-calc(2)
+  line-height: rem-calc(78)
+  font-weight: normal
   @media #{$small-only}
     font-size: rem-calc(54)
     line-height: rem-calc(60)
 
 h2
+  font-size: rem-calc(64)
+  letter-spacing: rem-calc(2)
+  line-height: rem-calc(72)
+  font-weight: normal
   @media #{$small-only}
     font-size: rem-calc(48)
     line-height: rem-calc(54)
 
 h3
+  font-family: $body-font-family
+  font-size: rem-calc(30)
+  font-weight: normal
+  letter-spacing: rem-calc(1)
+  line-height: rem-calc(36)
+  @media #{$small-only}
+    font-size: rem-calc(18)
+    line-height: rem-calc(24)
+
+h4
+  font-family: $body-font-family
+  font-size: rem-calc(24)
+  font-weight: bold
+  letter-spacing: rem-calc(1)
+  line-height: rem-calc(30)
   @media #{$small-only}
     font-size: rem-calc(18)
     line-height: rem-calc(24)
