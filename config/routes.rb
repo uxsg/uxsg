@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "/privacy" => "home#privacy", as: :privacy
   get "/terms" => "home#terms", as: :terms
 
+  resource :contact, controller: :contact, only: [:show, :create]
+
   resources :updates, only: [:index, :show]
 
   get "/sign-in" => "sessions#new", as: :sign_in

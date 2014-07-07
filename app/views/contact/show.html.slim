@@ -1,0 +1,31 @@
+.row
+  .large-8.columns
+    = form_tag do
+      .row
+        .medium-4.columns
+          = label_tag "contact[name]", "My name is", class: "right inline"
+        .medium-8.columns
+          = text_field_tag "contact[name]", "", placeholder: "Name"
+      .row
+        .medium-4.columns
+          = label_tag "contact[type]", "I would like to", class: "right inline"
+        .medium-8.columns
+          = select_tag "contact[type]", options_for_select(['learn more about the conference', 'find out how to become a sponsor'])
+      .row
+        .medium-4.columns
+          = label_tag "contact[question]", "The question I have is", class: "right inline"
+        .medium-8.columns
+          = text_area_tag "contact[question]", "", placeholder: "I was wondering if..."
+      .row
+        .medium-4.columns
+          = label_tag "contact[email]", "I am contactable through", class: "right inline"
+        .medium-8.columns
+          = email_field_tag "contact[email]", "", placeholder: "Email"
+      .row
+        .medium-4.columns
+          = label_tag "contact[phone]", "or through", class: "right inline"
+        .medium-8.columns
+          = phone_field_tag "contact[phone]", "", placeholder: "Contact number"
+      .row
+        .medium-8.push-4.columns
+          = submit_tag "Send enquiry", class: "button"
