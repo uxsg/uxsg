@@ -10,7 +10,7 @@ input
 .infobox
   .header
     background-color: $accent
-    border-radius: .3125em .3125em 0 0
+    border-radius: $global-radius $global-radius 0 0
     padding: 0.5rem 1rem
     > *
       color: white
@@ -20,7 +20,7 @@ input
         font-size: rem-calc(25)
   .content
     background-color: rgba(0,0,0,0.5)
-    border-radius: 0 0 .3125em .3125em
+    border-radius: 0 0 $global-radius $global-radius
     color: white
     padding: 0.5rem 1rem 1rem
     > p
@@ -41,11 +41,6 @@ input
     background: $action-alt
     &:hover
       background: $action-alt-hover
-
-.intro
-  color: $header-font-color
-  font-size: 1.5em
-  line-height: 1.5em
 
 blockquote
   border: none
