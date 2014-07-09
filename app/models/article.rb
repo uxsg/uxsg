@@ -4,6 +4,8 @@ class Article < ActiveRecord::Base
 
   mount_uploader :lead_image, ArticleImageUploader
 
+  scope :published, -> { where(published: true) }
+
   validates :title, :content, :published_at, presence: true
 
   rails_admin do
