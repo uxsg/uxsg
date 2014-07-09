@@ -1,10 +1,10 @@
 class UpdatesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.published
   end
 
   def show
-    @article = Article.friendly.find(params[:id])
-    @other_articles = Article.where.not(id: @article.id)
+    @article = Article.published.friendly.find(params[:id])
+    @other_articles = Article.published.where.not(id: @article.id)
   end
 end

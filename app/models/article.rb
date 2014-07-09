@@ -9,6 +9,12 @@ class Article < ActiveRecord::Base
   validates :title, :content, :published_at, presence: true
 
   rails_admin do
+    list do
+      field :title
+      field :published_at
+      field :published
+    end
+
     edit do
       field :title
       field :slug do
