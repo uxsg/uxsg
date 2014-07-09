@@ -10,7 +10,7 @@ article.article
       .large-12.columns
         .meta = "UXSG | #{@article.published_at.strftime('%e %b')}"
     .row
-      .large-7.columns
+      .large-6.columns
         - if @article.lead_image.present?
           .row.lead-image-container
             .large-12.columns
@@ -18,7 +18,23 @@ article.article
 
         .row
           .large-12.columns
-            .content == @article.content
+            .article-content == @article.content
 
-      .large-3.columns
-        h3 Other updates
+      .large-4.columns
+        h3.header-3 Other updates
+
+        - @other_articles.each do |article|
+          article.infobox.infobox-article class="#{'no-header' if @article.lead_image.blank?}"
+            - if article.lead_image.present?
+              = image_tag article.lead_image, class: "header"
+            .content
+              .row
+                .small-12.columns
+                  h4.header-4.article-title = article.title
+                  p = truncate(strip_tags(article.content), length: 100)
+              .row
+                .small-6.columns
+                  span.article-author UXSG
+                  span.article-meta = "#{article.published_at.strftime('%e %b')}"
+                .read-more.small-6.columns
+                  = link_to "Read more", update_path(article)
