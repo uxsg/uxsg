@@ -1,0 +1,14 @@
+article.infobox.infobox-article class="#{'no-header' if article.lead_image.blank?}"
+  - if article.lead_image.present?
+    = image_tag article.lead_image, class: "header"
+  .content
+    .row
+      .small-12.columns
+        h4.header-4.article-title = link_to article.title, update_path(article)
+        p = truncate(strip_tags(article.content), length: 100)
+    .row
+      .small-6.columns
+        span.article-author UXSG
+        span.article-meta = "#{article.published_at.strftime('%e %b')}"
+      .read-more.small-6.columns
+        = link_to "Read more", update_path(article)
