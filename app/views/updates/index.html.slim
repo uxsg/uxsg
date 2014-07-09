@@ -1,0 +1,11 @@
+.row
+  .medium-12.columns
+    header.header
+      h1.title.header-1 Updates
+
+.content-container
+  - @articles.each_slice(3) do |row|
+    .row
+      - row.each do |article|
+        .medium-4.columns.end
+          = render partial: "updates/tile", locals: { article: article }

@@ -2,7 +2,7 @@ article.article
   header.header
     .row
       .large-12.columns
-        h5.category Updates
+        h5.category = link_to "Updates", updates_path
         h1.title.header-1 = @article.title
 
   .content-container
