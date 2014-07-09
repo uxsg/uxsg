@@ -1,20 +1,17 @@
-body.updates.show
-  background: image-url("hero-bg.jpg") no-repeat top center
-  background-size: cover
-
 .article
   .content-container
     background: $background
-  .content
+  .article-content
     padding: 1rem 0
 
   .category
-    color: white
     margin-top: 1em
-    text-transform: lowercase
-  .title
+    a
+      color: white
+      text-transform: lowercase
+  header.header .title
     color: white
-    margin-bottom: 1em
+    margin-top: 0
     text-transform: lowercase
   .meta
     margin: 1rem 0
@@ -24,3 +21,22 @@ body.updates.show
 
   .content
     text-align: justify
+
+.infobox.infobox-article
+  margin-bottom: 1em
+  .header
+    padding: 0
+  .content
+    background-color: $background-callout
+    color: $text
+  .article-title a
+    color: $text
+  .article-author
+    border-right: solid 1px $text-mid
+    color: $text-mid
+    margin-right: 0.75em
+    padding-right: 0.75em
+  .article-meta
+    color: $text-mid
+  .read-more
+    text-align: right
