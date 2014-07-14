@@ -8,10 +8,19 @@ input
 .mobile-buffer
   margin-top: 2rem
 
-header.header .title
-  color: white
-  margin: .7em 0
-  text-transform: lowercase
+header.header
+  .title
+    color: white
+    margin: .7em 0
+    text-transform: lowercase
+  &.with-category
+    .category
+      margin-top: 1em
+      a
+        color: white
+        text-transform: lowercase
+    .title
+      margin-top: 0
 
 .content-container
   background: $background
