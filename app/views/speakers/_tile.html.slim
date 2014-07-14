@@ -1,0 +1,14 @@
+.speaker-tile
+  .row.collapse
+    - if speaker.photo.present?
+      .small-4.columns
+        .speaker-tile--photo
+          = link_to speaker do
+            = image_tag speaker.photo, alt: speaker.name
+    .small-8.columns
+      .speaker-tile--details class="#{'no-photo' if speaker.photo.blank?}"
+        .text-intro = link_to speaker.name, speaker
+        p
+          = speaker.position
+          br
+          = speaker.company
