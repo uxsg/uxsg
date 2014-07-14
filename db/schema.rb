@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709191351) do
+ActiveRecord::Schema.define(version: 20140714222342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 20140709191351) do
   end
 
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
+
+  create_table "speakers", force: true do |t|
+    t.string   "slug"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.boolean  "asian_name"
+    t.string   "position"
+    t.string   "company"
+    t.string   "website_link"
+    t.string   "linkedin_link"
+    t.string   "twitter_link"
+    t.text     "bio"
+    t.string   "photo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",            null: false
