@@ -1,9 +1,11 @@
 .hero-section
   .row
     .medium-6.columns
-      h4 1 &ndash; 3 october 2014
-      h1 impact through design
-    .medium-5.columns
+      h4.header-4 1 &ndash; 3 october 2014
+      h1.header-1
+        | impact
+        span.break through design
+    .medium-4.pull-1.columns
       .infobox
         header.header
           h2 call for submissions
@@ -15,10 +17,10 @@
   section.tickets
     .row
       .medium-12.columns
-        h2 early bird tickets
+        h2.header-1 early bird tickets
     .row
       .medium-6.columns
-        p.intro When will early bird tickets go on sale?
+        p.text-intro When will early bird tickets go on sale?
         p Regular early bird ticket sales will open on 15 July.
         p Subscribe to our mailing list and we'll update you as the conference programme is finalised.
         .subscribe-form
@@ -31,7 +33,7 @@
                  input type="text" name="b_72d5a562514b342cdfd9ab556_1757eedbad" value=""
              .medium-4.columns
                input#mc-embedded-subscribe.button.expand type="submit" value="Notify Me" name="subscribe"
-      .medium-5.columns
+      .medium-4.pull-1.columns
         .infobox.no-header
           .content.dark-bg
             blockquote
@@ -40,13 +42,32 @@
 
             .call-to-action = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", onclick: %Q(ga('send', 'event', 'Home Page', '2013 Highlights'))
 
+  section.venue
+    .row
+      .medium-12.columns
+        h2.header-1 the venue
+        p.text-intro.color-accent We are back at where it all began
+    .row
+      .medium-6.columns
+        = image_tag "venue-home.jpg"
+      .medium-5.columns.end
+        p.text-intro The Star Performing Arts Centre
+        p The Star Performing Arts Centre is strategically located at the heart of the Vista Exchange at Buona Vista in the one-north precinct.
+        p
+          | The Star Vista
+          br
+          | 1 Vista Exchange Green
+          br
+          | Singapore 138617
+        = link_to "Get directions", venue_path, class: "button"
+
   section.connect
     .row
       .large-12.columns
-        h2 connect with us
-        p.intro Follow us for the latest updates on our meetups and happenings
+        h2.header-1 connect with us
+        p.text-intro Follow us for the latest updates on our meetups and happenings
     .row
-      .medium-6.columns
+      .medium-5.columns
         = link_to "Visit Facebook Group", "//www.facebook.com/groups/uxsingapore/", class: "social facebook", onclick: %Q(ga('send', 'event', 'Home Page', 'Social', 'Facebook'))
-      .medium-6.columns
+      .medium-5.pull-1.columns
         = link_to "Follow @uxsingapore", "//www.twitter.com/uxsingapore", class: "social twitter", onclick: %Q(ga('send', 'event', 'Home Page', 'Social', 'Twitter'))

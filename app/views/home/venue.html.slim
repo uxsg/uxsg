@@ -1,0 +1,58 @@
+= content_for(:title) do
+  | Venue
+
+.row
+  .large-12.columns
+    header.header
+      h1.header-1.title Venue
+
+.content-container
+  .row
+    .large-10.columns
+      h2.header-2.downcase The Star Performing Arts Centre
+      p.text-intro The Star Performing Arts Centre is strategically located at the heart of the Vista Exchange at Buona Vista in the one-north precinct.
+  .row
+    .large-12.columns
+      = image_tag "venue.jpg"
+  .venue-directions.row
+    .medium-4.columns
+      h3.venue-directions--title.venue-directions--plane From the airport
+      ul.venue-directions-list
+        li Walk to Changi Airport Station.
+        li
+          span East-West Line:
+          span.break Board the train towards Tanah Merah Station and alight at Tanah Merah Station, 2 stops later.
+        li Board train towards Joo Koon Station and alight at Buona Vista Station, 17 stops later.
+        li Walk to the Star Vista
+      p.text-intro or
+      ul.venue-directions-list
+        li Walk to the bus stop at Changi Airport Passenger Terminal Building 2, Basement.
+        li Board Bus 27 at Changi Airport Passenger Terminal Building 2 (95129), Basement.
+        li Alight at Tampines Central, 5 stops later.
+        li Walk to Tampines MRT Station, board subway towards Joo Koon.
+        li Alight at Buona Vista Station
+        li Walk to The Star Vista
+    .medium-4.columns
+      h3.venue-directions--title.venue-directions--car By car
+      p
+        | Nearest expressway:
+        br
+        | Ayer Rajah Expressway (AYE)
+      ul.venue-directions-list
+        li Drive to Exit 8 towards North Buona Vista Road.
+        li Turn right into South Buona Vista Road and continue onto Buona Vista Flyover.
+        li Along North Buona Vista Road, turn left onto Commonwealth Avenue West.
+        li Destination will be on the right.
+    .medium-4.columns
+      h3.venue-directions--title.venue-directions--bus By bus
+      p
+        | Along North Buona Vista Road:
+        br
+        | 74, 91, 92, 95, 191, 196, 198, 200
+      p
+        | Along Commonwealth Ave West:
+        br
+        | 196, 198, 200, NR5, NR8
+      h3.venue-directions--title.venue-directions--train By train
+      |  Nearest MRT station:
+      span CC22/EW21 Buona Vista Station
