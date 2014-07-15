@@ -13,6 +13,9 @@ class Programme < ActiveRecord::Base
   scope :day_2, -> { where(day: 2) }
   scope :day_3, -> { where(day: 3) }
 
+  scope :keynotes,  -> { where(category: 1) }
+  scope :workshops, -> { where(category: 2) }
+
   rails_admin do
     edit do
       field :title
