@@ -3,8 +3,10 @@
     .programme-tile
       .programme-tile--meta
         .text-intro = link_to programme.title, programme_path(programme)
-        - if programme.happens_at.present?
-          .time = "#{programme.category.humanize} on Day #{programme.day} - #{programme.happens_at.strftime('%A, %e %b, %H:%M %p')}"
+        .time
+          = "#{programme.category.humanize}"
+          - if programme.happens_at.present?
+            = " on Day #{programme.day} - #{programme.happens_at.strftime('%A, %e %b, %H:%M %p')}"
 
       .programme-tile--details
         p.description = truncate(strip_tags(programme.description), length: 200)
