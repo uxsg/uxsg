@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get "/venue" => "home#venue", as: :venue
 
   resource :contact, controller: :contact, only: [:show, :create]
+
+  get "/programme/:type/:id" => "programmes#show"
+  resources :programme, only: [:index, :show], controller: :programmes
+
   resources :speakers, only: [:index, :show]
   resources :updates, only: [:index, :show]
 
