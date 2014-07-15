@@ -1,6 +1,8 @@
 body
   background: image-url("page-bg.jpg") no-repeat top center #000
   background-size: contain
+  @media #{$small-only}
+    background-size: cover
 
 input
   border-radius: .3125em
@@ -13,6 +15,8 @@ header.header
     color: white
     margin: .7em 0
     text-transform: lowercase
+    @media #{$small-only}
+      margin-top: 1em
   &.with-category
     .category
       color: white
