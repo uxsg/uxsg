@@ -1,0 +1,20 @@
+- photo ||= true
+
+.programme-tile
+  .row.collapse
+    .small-2.columns
+      .programme-tile--time
+        .header-3
+          = programme.happens_at.strftime("%H:%M")
+          span.meridiem = programme.happens_at.strftime("%p")
+    - if photo
+      .small-3.columns
+        .programme-tile--photo
+          = link_to programme do
+            = image_tag programme.speaker.photo, alt: programme.speaker.name
+    .small-7.columns
+      .programme-tile--details class="#{'no-photo' unless photo}"
+        .text-intro = link_to programme.title, programme_path(programme)
+        p.byline == "by #{link_to programme.speaker.name, programme.speaker}"
+        p.description = truncate(strip_tags(programme.description), length: 80)
+        = link_to "View more details", programme_path(programme)

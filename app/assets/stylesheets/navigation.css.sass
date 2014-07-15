@@ -18,6 +18,32 @@
       display: block
       font-weight: bold
 
+.tab-bar
+  background-color: #000
+  background-color: rgba(0,0,0,0.5)
+  height: 3.5rem
+  .menu-icon
+    height: 3.5rem
+    width: 3.5rem
+    span::after
+      left: rem-calc(23)
+  .left-small
+    background-color: $accent
+    border-right: none
+    height: 3.5rem
+    width: 3.5rem
+  .right
+    height: 3.5rem
+  .site-title
+    margin: 0 auto
+    padding-top: rem-calc(5)
+    width: 155px
+    .conference
+      font-size: rem-calc(16)
+      margin-top: rem-calc(-5)
+    .year
+      display: inline
+
 .tab-bar-section
   .site-title a
     .logo
