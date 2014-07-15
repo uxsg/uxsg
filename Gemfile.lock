@@ -286,6 +286,7 @@ DEPENDENCIES
   database_cleaner (~> 1.2.0)
   dotenv-rails
   fog
+  font-awesome-rails
   foundation-rails
   friendly_id (~> 5.0.0)
   jbuilder (~> 2.0)

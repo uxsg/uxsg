@@ -37,6 +37,7 @@ gem "jbuilder", "~> 2.0"
 
 gem "foundation-rails"
 gem "bootstrap-wysihtml5-rails", "0.3.1.24"
+gem "font-awesome-rails"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
