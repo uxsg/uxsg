@@ -7,7 +7,7 @@
     /     .header-3
     /       = programme.happens_at.strftime("%H:%M")
     /       span.meridiem = programme.happens_at.strftime("%p")
-    - if programme.speaker.photo.present?
+    - if photo
       .small-3.columns
         .programme-tile--photo
           = link_to programme do
