@@ -33,9 +33,12 @@ header.header.with-category
         br
         = @speaker.company
       .speaker--description == simple_format @speaker.bio
+
       h3 = "#{@speaker.first_name} will present or conduct"
-      - @speaker.programmes.each do |programme|
-        = render partial: "programmes/tile", locals: { programme: programme }
+
+      .speaker--programmes
+        - @speaker.programmes.each do |programme|
+          = render partial: "programmes/tile", locals: { programme: programme }
 
   .speaker--more-speakers
     .row
