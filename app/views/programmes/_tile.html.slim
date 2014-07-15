@@ -3,7 +3,7 @@
     .programme-tile
       .programme-tile--meta
         .text-intro = link_to programme.title, programme_path(programme)
-        - unless programme.happens_at.present?
+        - if programme.happens_at.present?
           .time = "#{programme.category.humanize} on Day #{programme.day} - #{programme.happens_at.strftime('%A, %e %b, %H:%M %p')}"
 
       .programme-tile--details
