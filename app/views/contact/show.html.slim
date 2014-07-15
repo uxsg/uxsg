@@ -12,40 +12,4 @@ header.header
       = render partial: "layouts/messages"
   .row
     .large-7.columns
-      = form_for @enquiry, url: contact_path do |f|
-        - if @enquiry.errors.any?
-          .row
-            .medium-8.push-4.columns
-              .alert-box.alert
-                ul
-                  - @enquiry.errors.full_messages.each do |message|
-                   li = message
-
-        .row
-          .medium-4.columns
-            = f.label :name, "My name is", class: "right inline"
-          .medium-8.columns
-            = f.text_field :name, placeholder: "Name"
-        .row
-          .medium-4.columns
-            = f.label :type, "I would like to", class: "right inline"
-          .medium-8.columns
-            = f.select :type, options_for_select(['learn more about the conference', 'find out how to become a sponsor'])
-        .row
-          .medium-4.columns
-            = f.label :question, "The question I have is", class: "right inline"
-          .medium-8.columns
-            = f.text_area :question, placeholder: "I was wondering if..."
-        .row
-          .medium-4.columns
-            = f.label :email, "I am contactable through", class: "right inline"
-          .medium-8.columns
-            = f.email_field :email, placeholder: "Email"
-        .row
-          .medium-4.columns
-            = f.label :phone, "or through", class: "right inline"
-          .medium-8.columns
-            = f.phone_field :phone, placeholder: "Contact number"
-        .row
-          .medium-8.push-4.columns
-            = submit_tag "Send enquiry", class: "button"
+      = render partial: "contact/form"

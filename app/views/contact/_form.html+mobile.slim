@@ -1,0 +1,37 @@
+= form_for @enquiry, url: contact_path do |f|
+  - if @enquiry.errors.any?
+    .row
+      .medium-8.push-4.columns
+        .alert-box.alert
+          ul
+            - @enquiry.errors.full_messages.each do |message|
+             li = message
+
+  .row
+    .medium-4.columns
+      = f.label :name, "My name is"
+    .medium-8.columns
+      = f.text_field :name, placeholder: "Name"
+  .row
+    .medium-4.columns
+      = f.label :type, "I would like to"
+    .medium-8.columns
+      = f.select :type, options_for_select(['learn more about the conference', 'find out how to become a sponsor'])
+  .row
+    .medium-4.columns
+      = f.label :question, "The question I have is"
+    .medium-8.columns
+      = f.text_area :question, placeholder: "I was wondering if..."
+  .row
+    .medium-4.columns
+      = f.label :email, "I am contactable through"
+    .medium-8.columns
+      = f.email_field :email, placeholder: "Email"
+  .row
+    .medium-4.columns
+      = f.label :phone, "or through"
+    .medium-8.columns
+      = f.phone_field :phone, placeholder: "Contact number"
+  .row
+    .medium-8.push-4.columns
+      = submit_tag "Send enquiry", class: "button expand"
