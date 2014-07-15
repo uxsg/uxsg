@@ -9,5 +9,5 @@
             = " on Day #{programme.day} - #{programme.happens_at.strftime('%A, %e %b, %H:%M %p')}"
 
       .programme-tile--details
-        p.description = truncate(strip_tags(programme.description), length: 200)
+        p.description == truncate(strip_tags(programme.description), length: 200)
         = link_to "View more details", programme_path(programme)

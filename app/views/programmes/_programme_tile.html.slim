@@ -16,5 +16,5 @@
       .programme-tile--details class="#{'no-photo' unless photo}"
         .text-intro = link_to programme.title, programme_path(programme)
         p.byline == "#{programme.category.humanize} by #{link_to programme.speaker.name, programme.speaker}"
-        p.description = truncate(strip_tags(programme.description), length: 80)
+        p.description == truncate(strip_tags(programme.description), length: 80)
         = link_to "View more details", programme_path(programme)
