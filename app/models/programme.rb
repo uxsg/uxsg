@@ -11,4 +11,16 @@ class Programme < ActiveRecord::Base
   scope :day_1, -> { where(day: 1) }
   scope :day_2, -> { where(day: 2) }
   scope :day_3, -> { where(day: 3) }
+
+  rails_admin do
+    edit do
+      field :title
+      field :slug
+      field :happens_at
+      field :day
+      field :category
+      field :description, :wysihtml5
+      field :speaker
+    end
+  end
 end
