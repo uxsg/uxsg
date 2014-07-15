@@ -1,0 +1,8 @@
+- unless flash.empty?
+  .row
+    .large-12.columns
+      - flash.each do |name, msg|
+        - if msg.is_a?(String)
+          div data-alert="" class="alert-box #{name.to_s}"
+            = msg
+            a.close &times;
