@@ -4,6 +4,8 @@ class Speaker < ActiveRecord::Base
 
   mount_uploader :photo, SpeakerImageUploader
 
+  has_many :programmes
+
   validates :first_name, :last_name, presence: true
 
   def name
