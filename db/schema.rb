@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140714222342) do
+ActiveRecord::Schema.define(version: 20140715002134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(version: 20140714222342) do
   end
 
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
+
+  create_table "programmes", force: true do |t|
+    t.integer  "category",    default: 0
+    t.datetime "happens_at"
+    t.string   "title"
+    t.string   "slug"
+    t.text     "description"
+    t.integer  "speaker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "programmes", ["speaker_id"], name: "index_programmes_on_speaker_id", using: :btree
 
   create_table "speakers", force: true do |t|
     t.string   "slug"
