@@ -12,13 +12,19 @@ header.header.with-category
     .medium-4.columns
       - if @speaker.photo.present?
         = image_tag @speaker.photo_url
-      ul
+      ul.fa-ul.speaker--links
         - if @speaker.website_link.present?
-          li = link_to "website", @speaker.website_link, target: "_blank"
+          li
+            i.fa.fa-li.fa-external-link
+            = link_to "website", @speaker.website_link, target: "_blank"
         - if @speaker.linkedin_link.present?
-          li = link_to "linkedin", @speaker.linkedin_link, target: "_blank"
+          li
+            i.fa.fa-li.fa-linkedin-square
+            = link_to "linkedin", @speaker.linkedin_link, target: "_blank"
         - if @speaker.twitter_link.present?
-          li = link_to "twitter", @speaker.twitter_link, target: "_blank"
+          li
+            i.fa.fa-li.fa-twitter
+            = link_to "twitter", @speaker.twitter_link, target: "_blank"
 
     .medium-8.columns
       .text-intro = @speaker.name
