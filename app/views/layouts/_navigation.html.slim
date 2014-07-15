@@ -9,7 +9,8 @@
             span.year 2014
     section.top-bar-section
       ul.right
-        li = link_to "home", root_path
         li = link_to "updates", updates_path
+        li = link_to "speakers", speakers_path
+        li = link_to "programme", "/programme"
         li = link_to "venue", venue_path
         li = link_to "call for submissions", "//docs.google.com/forms/d/1ExyKGJKDm_NgvofryK_njWf5Mhff7h4Wh4uBKmdzRDg/viewform", target: "_blank", onclick: %Q(ga('send', 'event', 'Menu', 'Desktop Nav', 'Call for Submissions'))
