@@ -9,11 +9,11 @@ body.home.index
       color: $accent
 
   .hero-section
-    padding: 3rem 0 5rem
+    padding: 3rem 0 4rem
     h1
       @media #{$medium-up}
         font-size: 3.75rem
-        margin-top: 2rem
+        margin-bottom: 2rem
     h4
       font-weight: lighter
       @media #{$medium-up}
@@ -23,6 +23,24 @@ body.home.index
       text-shadow: 0px 1px 2px rgba(0,0,0,0.5)
       @media #{$small-only}
         text-align: center
+    .text-intro
+      color: white
+
+    .infobox
+      font-size: rem-calc(16)
+      text-align: center
+      p
+        line-height: rem-calc(24)
+      span.price
+        color: white
+        font-weight: bold
+      span.discount
+        font-size: rem-calc(14)
+      .button
+        margin-bottom: 0
+      span.sales-end
+        font-size: rem-calc(14)
+
 
   .main-section
     background-color: $background
