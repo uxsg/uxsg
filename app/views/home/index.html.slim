@@ -42,6 +42,18 @@
 
             .call-to-action = link_to "Check out UXSG 2013 highlights", "http://2013.uxsg.org", onclick: %Q(ga('send', 'event', 'Home Page', '2013 Highlights'))
 
+  section.updates
+    .row
+      .medium-12.columns
+        h2.header-1 updates
+        p.text-intro.color-accent Have a look at how this year's conference comes together
+
+    - @updates.each_slice(3) do |row|
+      .row
+        - row.each do |update|
+          .medium-4.columns.end
+            = render partial: "updates/tile", locals: { article: update }
+
   section.venue
     .row
       .medium-12.columns
