@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/terms" => "home#terms", as: :terms
   get "/venue" => "home#venue", as: :venue
 
+  resource :contact, controller: :contact, only: [:show, :create]
   resources :speakers, only: [:index, :show]
   resources :updates, only: [:index, :show]
 

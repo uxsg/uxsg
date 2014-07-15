@@ -5,6 +5,12 @@ body, p
 span.break
   display: block
 
+.field_with_errors
+  > input, textarea
+    border-color: $alert-color
+  > label
+    color: $alert-color
+
 .downcase
   text-transform: lowercase
 

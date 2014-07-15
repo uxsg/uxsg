@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation/foundation
+//= require foundation/foundation.alert
 //= require foundation/foundation.offcanvas
 //= require foundation/foundation.topbar
 //= require turbolinks

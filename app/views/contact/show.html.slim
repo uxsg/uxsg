@@ -1,0 +1,15 @@
+- content_for(:title) do
+  | Contact Us
+
+header.header
+  .row
+    .large-12.columns
+      h1.title.header-1 contact us
+
+.content-container
+  .row
+    .small-12.columns
+      = render partial: "layouts/messages"
+  .row
+    .large-7.columns
+      = render partial: "contact/form"
