@@ -1,25 +1,22 @@
 .speaker-tile
-  - if speaker.published?
-    - if speaker.photo.present?
-      .row
-        .medium-12.columns
+  .row.collapse
+    - if speaker.published?
+      - if speaker.photo.present?
+        .small-4.columns
           .speaker-tile--photo
             = link_to speaker do
               = image_tag speaker.photo, alt: speaker.name
-    .row
-      .medium-12.columns
+      .small-8.columns
         .speaker-tile--details class="#{'no-photo' if speaker.photo.blank?}"
           .speaker-tile--name = link_to speaker.name, speaker
           p.speaker-tile--profile
             = speaker.position
             br
             = speaker.company
-  - else
-    .row
-      .medium-12.columns
+    - else
+      .small-4.columns
         .speaker-tile--photo
           = image_tag "icon-person.png"
-    .row
-      .medium-12.columns
+      .small-8.columns
         .speaker-tile--details.unpublished
           .speaker-tile--name To be confirmed

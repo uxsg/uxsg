@@ -4,13 +4,30 @@
 .speaker-tile
   background-color: $background-callout
   border-radius: $global-radius
+  margin-bottom: 1rem
 
 .speaker-tile--photo img
-  border-radius: $global-radius 0 0 $global-radius
+  width: 100%
+  border-radius: $global-radius $global-radius 0 0
+  @media #{$small-only}
+    border-radius: $global-radius 0 0 $global-radius
+
 
 .speaker-tile--details
   background-color: $background-callout
   border-radius: $global-radius
-  padding: 0.5rem 1rem 0
-  p
-    margin-bottom: 0
+  padding: 0.5rem 1rem
+  @media #{$small-only}
+    padding: 0.25rem 0.5rem
+
+.speaker-tile--name
+  font-size: rem-calc(16)
+
+.speaker-tile--profile
+  font-size: rem-calc(14)
+  margin-bottom: 0
+
+.speaker-tile--details.unpublished .speaker-tile--name
+  line-height: rem-calc(75)
+  @media #{$small-only}
+    line-height: rem-calc(88)
