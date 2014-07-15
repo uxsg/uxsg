@@ -8,9 +8,7 @@ class Programme < ActiveRecord::Base
                    keynote:  1,
                    workshop: 2 }
 
-  def day
-    return 1 if happens_at < "2014-10-02 00:00:00 +0800".to_time
-    return 2 if happens_at < "2014-10-03 00:00:00 +0800".to_time
-    return 3 if happens_at < "2014-10-04 00:00:00 +0800".to_time
-  end
+  scope :day_1, -> { where(day: 1) }
+  scope :day_2, -> { where(day: 2) }
+  scope :day_3, -> { where(day: 3) }
 end

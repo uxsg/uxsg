@@ -7,7 +7,35 @@ header.header
       h1.title.header-1 programme
 
 .content-container
-  - @programmes.each do |programme|
+  - if @day_1.present?
+    .row
+      .medium-12.columns
+        h2.header-2 conference day 1
+        p.text-intro Wednesday, October 1st
+
+    - @day_1.each do |programme|
+      .row
+        .medium-8.columns
+          = render partial: "programmes/tile", locals: { programme: programme }
+
+- if @day_2.present?
+  .row
+    .medium-12.columns
+      h2.header-2 conference day 2
+      p.text-intro Thursday, October 2nd
+
+  - @day_2.each do |programme|
+    .row
+      .medium-8.columns
+        = render partial: "programmes/tile", locals: { programme: programme }
+
+- if @day_3.present?
+  .row
+    .medium-12.columns
+      h2.header-2 conference day 3
+      p.text-intro Friday, October 3rd
+
+  - @day_3.each do |programme|
     .row
       .medium-8.columns
         = render partial: "programmes/tile", locals: { programme: programme }
