@@ -14,6 +14,6 @@ header.header.with-category
         p.text-intro = "Day #{@programme.day} - #{@programme.happens_at.strftime('%A, %e %b, %H:%M %p')}"
       == @programme.description
   .row
-    .medium-6.columns
-      h3.header-3 Speaker
+    .medium-4.columns
+      h3.header-3 Speaker Info
       = render partial: "speakers/tile", locals: { speaker: @programme.speaker }
