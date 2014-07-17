@@ -24,7 +24,7 @@ header.header.with-category
         - if @speaker.twitter_link.present?
           li
             i.fa.fa-li.fa-twitter
-            = link_to "twitter", @speaker.twitter_link, target: "_blank"
+            = twitter_link(@speaker)
 
     .medium-8.columns
       .text-intro = @speaker.name
