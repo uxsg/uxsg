@@ -38,11 +38,13 @@ header.header
     .medium-6.columns
       h2.header-3 Keynotes
       - @programmes.keynotes.each do |programme|
-        = render partial: "programmes/programme_tile", locals: { programme: programme }
+        - if programme.speaker.published?
+          = render partial: "programmes/programme_tile", locals: { programme: programme }
     .medium-6.columns
       h2.header-3 Workshops
       - @programmes.workshops.each do |programme|
-        = render partial: "programmes/programme_tile", locals: { programme: programme }
+        - if programme.speaker.published?
+          = render partial: "programmes/programme_tile", locals: { programme: programme }
 
 /   - if @day_1.present?
 /     .row
