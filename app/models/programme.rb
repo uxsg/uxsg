@@ -5,6 +5,8 @@ class Programme < ActiveRecord::Base
   has_many :programme_speakers
   has_many :speakers, through: :programme_speakers
 
+  belongs_to :industry_track
+
   enum category: { misc:                       0,
                    keynote:                    1,
                    workshop:                   2,
@@ -29,6 +31,7 @@ class Programme < ActiveRecord::Base
       field :happens_at
       field :day
       field :category
+      field :industry_track
       field :description, :wysihtml5
       field :speakers
     end
