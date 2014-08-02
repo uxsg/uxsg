@@ -1,10 +1,10 @@
 - content_for(:title) do
-  = "#{@programme.title} by #{@programme.speaker.name} | Programme"
+  = "#{@programme.title} by #{@programme.list_of_speakers} | Programme"
 
 header.header.with-category
   .row
     .medium-12.columns
-      h5.category = "#{@programme.category} by #{@programme.speaker.name}"
+      h5.category = "#{@programme.category} by #{@programme.list_of_speakers}"
       h1.title.header-1 = @programme.title
 
 .content-container
@@ -14,6 +14,9 @@ header.header.with-category
         p.text-intro = "Day #{@programme.day} - #{@programme.happens_at.strftime('%A, %e %b, %H:%M %p')}"
       == @programme.description
   .row
-    .medium-4.columns
+    .medium-12.columns
       h3.header-3 Speaker Info
-      = render partial: "speakers/tile", locals: { speaker: @programme.speaker }
+  .row
+    - @programme.speakers.each do |speaker|
+      .medium-4.columns.end
+        = render partial: "speakers/tile", locals: { speaker: speaker }

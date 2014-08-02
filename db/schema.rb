@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140715120859) do
+ActiveRecord::Schema.define(version: 20140802024512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(version: 20140715120859) do
 
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
 
+  create_table "programme_speakers", force: true do |t|
+    t.integer  "programme_id"
+    t.integer  "speaker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "programme_speakers", ["programme_id", "speaker_id"], name: "index_programme_speakers_on_programme_id_and_speaker_id", unique: true, using: :btree
+  add_index "programme_speakers", ["programme_id"], name: "index_programme_speakers_on_programme_id", using: :btree
+  add_index "programme_speakers", ["speaker_id"], name: "index_programme_speakers_on_speaker_id", using: :btree
+
   create_table "programmes", force: true do |t|
     t.integer  "category",    default: 0
     t.datetime "happens_at"
@@ -42,6 +53,15 @@ ActiveRecord::Schema.define(version: 20140715120859) do
   end
 
   add_index "programmes", ["speaker_id"], name: "index_programmes_on_speaker_id", using: :btree
+
+  create_table "programmes_speakers", force: true do |t|
+    t.integer "speaker_id"
+    t.integer "programme_id"
+  end
+
+  add_index "programmes_speakers", ["programme_id"], name: "index_programmes_speakers_on_programme_id", using: :btree
+  add_index "programmes_speakers", ["speaker_id", "programme_id"], name: "index_programmes_speakers_on_speaker_id_and_programme_id", unique: true, using: :btree
+  add_index "programmes_speakers", ["speaker_id"], name: "index_programmes_speakers_on_speaker_id", using: :btree
 
   create_table "speakers", force: true do |t|
     t.string   "slug"
