@@ -10,8 +10,9 @@
     - if photo
       .small-3.columns
         .programme-tile--photo
-          = link_to programme do
-            = image_tag programme.speakers.first.photo, alt: programme.speakers.first.name
+          - programme.speakers.each do |speaker|
+            = link_to programme do
+              = image_tag speaker.photo, alt: speaker.name
     .small-9.columns
       .programme-tile--details class="#{'no-photo' unless photo}"
         .text-intro = link_to programme.title, programme_path(programme)
