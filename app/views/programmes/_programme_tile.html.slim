@@ -11,10 +11,13 @@
       .small-3.columns
         .programme-tile--photo
           = link_to programme do
-            = image_tag programme.speaker.photo, alt: programme.speaker.name
+            = image_tag programme.speakers.first.photo, alt: programme.speakers.first.name
     .small-9.columns
       .programme-tile--details class="#{'no-photo' unless photo}"
         .text-intro = link_to programme.title, programme_path(programme)
-        p.byline == "#{programme.category.humanize} by #{link_to programme.speaker.name, programme.speaker}"
+        p.byline
+          => "#{programme.category.humanize} by"
+          - speaker_links = programme.speakers.map { |s| link_to s.name, s }
+          == speaker_links.to_sentence
         p.description == truncate(strip_tags(programme.description), length: 80)
         = link_to "View more details", programme_path(programme)

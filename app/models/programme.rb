@@ -2,12 +2,16 @@ class Programme < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  belongs_to :speaker
+  has_many :programme_speakers
+  has_many :speakers, through: :programme_speakers
+
+  belongs_to :industry_track
 
   enum category: { misc:                       0,
                    keynote:                    1,
                    workshop:                   2,
-                   "lightning presentation" => 3 }
+                   tour:                       3,
+                   "lightning presentation" => 4 }
 
   scope :day_1, -> { where(day: 1) }
   scope :day_2, -> { where(day: 2) }
@@ -16,6 +20,10 @@ class Programme < ActiveRecord::Base
   scope :keynotes,  -> { where(category: 1) }
   scope :workshops, -> { where(category: 2) }
 
+  def list_of_speakers
+    speakers.map { |s| s.name }.to_sentence
+  end
+
   rails_admin do
     edit do
       field :title
@@ -23,8 +31,9 @@ class Programme < ActiveRecord::Base
       field :happens_at
       field :day
       field :category
+      field :industry_track
       field :description, :wysihtml5
-      field :speaker
+      field :speakers
     end
   end
 end
