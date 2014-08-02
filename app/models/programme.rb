@@ -8,7 +8,8 @@ class Programme < ActiveRecord::Base
   enum category: { misc:                       0,
                    keynote:                    1,
                    workshop:                   2,
-                   "lightning presentation" => 3 }
+                   tour:                       3,
+                   "lightning presentation" => 4 }
 
   scope :day_1, -> { where(day: 1) }
   scope :day_2, -> { where(day: 2) }
