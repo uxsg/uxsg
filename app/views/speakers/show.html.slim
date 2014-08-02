@@ -37,7 +37,7 @@ header.header.with-category
       h3 = "#{@speaker.first_name} will present or conduct"
 
       .speaker--programmes
-        - @speaker.programmes.each do |programme|
+        - @speaker.programmes.order(category: :asc).each do |programme|
           = render partial: "programmes/tile", locals: { programme: programme }
 
   / .speaker--more-speakers
