@@ -26,6 +26,16 @@ header.header.with-category
             i.fa.fa-li.fa-twitter
             = twitter_link(@speaker)
 
+      - if @speaker.publications.any?
+        h3 Publications
+        - @speaker.publications.each do |publication|
+          .speaker--publication
+            = image_tag publication.image_url
+            .speaker--publication-info
+              .speaker--publication-type = publication.publication_type
+              = link_to publication.title, publication.url, target: "_blank"
+            .speaker--publication-footer
+
     .medium-8.columns
       .text-intro = @speaker.name
       p

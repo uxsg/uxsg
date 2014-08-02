@@ -6,6 +6,7 @@ class Speaker < ActiveRecord::Base
 
   has_many :programme_speakers
   has_many :programmes, through: :programme_speakers
+  has_many :publications
 
   validates :first_name, :last_name, presence: true
 
@@ -32,6 +33,7 @@ class Speaker < ActiveRecord::Base
       field :photo
       field :published
       field :programmes
+      field :publications
     end
   end
 end
