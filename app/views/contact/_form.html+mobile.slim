@@ -16,7 +16,7 @@
     .medium-4.columns
       = f.label :type, "I would like to"
     .medium-8.columns
-      = f.select :type, options_for_select(['learn more about the conference', 'find out how to become a sponsor'])
+      = f.select :type, options_for_select(['learn more about the conference', 'find out how to become a sponsor'], (params[:enquiry_type] == "sponsor" ? "find out how to become a sponsor" : nil))
   .row
     .medium-4.columns
       = f.label :question, "The question I have is"

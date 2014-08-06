@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :programme, only: [:index, :show], controller: :programmes
 
   resources :speakers, only: [:index, :show]
+  resources :sponsors, only: [:index, :show]
   resources :updates, only: [:index, :show]
 
   get "/sign-in" => "sessions#new", as: :sign_in

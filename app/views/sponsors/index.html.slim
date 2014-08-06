@@ -1,0 +1,38 @@
+= content_for(:title) do
+  | Sponsors
+
+.row
+  .large-12.columns
+    header.header
+      h1.header-1.title Sponsors
+
+.content-container
+  .row
+    .medium-12.columns
+      h2.header-1 Be part of UXSG!
+
+  .row
+    .medium-9.columns
+      p
+        ' By sponsoring UXSG Conference 2014, your brand will be connected with
+        ' some of the most influential UX practitioners, organisations or leaders
+        ' in the industry. It also provides you with brand visibility and
+        ' networking opportunities.
+      p
+        ' If you are interested in sponsorship opporunities or event partnerships,
+        ' contact us at
+        = mail_to "marketing@uxsg.org"
+        ' . We would love to hear from you!
+
+      = link_to "Become a sponsor", contact_path(enquiry_type: "sponsor"), class: "button"
+
+  - if @sponsors.any?
+    .row
+      .medium-12.columns
+        h2 Our sponsors
+    - begin
+      - @sponsors.each_slice(4) do |row|
+        .row
+          - row.each do |sponsor|
+            .medium-4.columns.end
+              = sponsor.name
