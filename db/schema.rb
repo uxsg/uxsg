@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20140806063613) do
   create_table "sponsors", force: true do |t|
     t.string   "name"
     t.string   "slug"
-    t.string   "sponsor_type"
+    t.integer  "sponsor_type"
     t.string   "url"
     t.text     "description"
     t.string   "logo"

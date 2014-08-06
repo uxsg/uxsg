@@ -3,7 +3,7 @@ class CreateSponsors < ActiveRecord::Migration
     create_table :sponsors do |t|
       t.string :name
       t.string :slug
-      t.string :sponsor_type
+      t.integer :sponsor_type
       t.string :url
       t.text :description
       t.string :logo
