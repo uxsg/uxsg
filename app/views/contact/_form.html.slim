@@ -28,10 +28,5 @@
     .medium-8.columns
       = f.email_field :email, placeholder: "Email"
   .row
-    .medium-4.columns
-      = f.label :phone, "or through", class: "right inline"
-    .medium-8.columns
-      = f.phone_field :phone, placeholder: "Contact number"
-  .row
     .medium-8.push-4.columns
       = submit_tag "Send enquiry", class: "button"
