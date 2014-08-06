@@ -34,5 +34,15 @@
       - @sponsors.each_slice(4) do |row|
         .row
           - row.each do |sponsor|
-            .medium-4.columns.end
-              = sponsor.name
+            .medium-3.columns.end
+              = link_to "#", data: { "reveal-id" => "sponsor-#{sponsor.id}" } do
+                = image_tag sponsor.logo, title: sponsor.name, class: "sponsor--logo"
+
+              .sponsor--modal.reveal-modal id="sponsor-#{sponsor.id}" data-reveal=""
+                .row
+                  .medium-4.columns
+                    = image_tag sponsor.logo, title: sponsor.name, class: "sponsor--logo"
+                  .medium-8.columns
+                    h3 = sponsor.name
+                    p = link_to sponsor.url, sponsor.url, target: "_blank"
+                    == sponsor.description

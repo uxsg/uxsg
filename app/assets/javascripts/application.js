@@ -15,6 +15,7 @@
 //= require foundation/foundation
 //= require foundation/foundation.alert
 //= require foundation/foundation.offcanvas
+//= require foundation/foundation.reveal
 //= require foundation/foundation.topbar
 //= require turbolinks
 //= require_tree .
