@@ -3,6 +3,9 @@ class HomeController < ApplicationController
     @updates = Article.published.order(published_at: :desc)
   end
 
+  def call_for_submissions
+  end
+
   def privacy
   end
 

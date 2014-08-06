@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "home#index"
 
+  get "/call-for-submissions" => "home#call_for_submissions", as: :call_for_submissions
   get "/privacy" => "home#privacy", as: :privacy
   get "/terms" => "home#terms", as: :terms
   get "/venue" => "home#venue", as: :venue
