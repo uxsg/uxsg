@@ -4,6 +4,9 @@ class Sponsor < ActiveRecord::Base
   enum sponsor_type: { sponsor: 0,
                        partner: 1 }
 
+  scope :sponsors, -> { where(sponsor_type: 0) }
+  scope :partners, -> { where(sponsor_type: 1) }
+
   rails_admin do
     edit do
       field :name
