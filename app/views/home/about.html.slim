@@ -38,7 +38,7 @@
   - @experience.each_slice(3) do |row|
     .row
       - row.each do |volunteer|
-        .medium-4.columns
+        .medium-4.columns.end
           = render partial: "volunteers/tile", locals: { volunteer: volunteer }
 
   .row
@@ -48,7 +48,7 @@
   - @operations.each_slice(3) do |row|
     .row
       - row.each do |volunteer|
-        .medium-4.columns
+        .medium-4.columns.end
           = render partial: "volunteers/tile", locals: { volunteer: volunteer }
 
   .row
@@ -58,5 +58,5 @@
   - @product.each_slice(3) do |row|
     .row
       - row.each do |volunteer|
-        .medium-4.columns
+        .medium-4.columns.end
           = render partial: "volunteers/tile", locals: { volunteer: volunteer }
