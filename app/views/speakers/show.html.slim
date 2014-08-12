@@ -1,47 +1,53 @@
 - content_for(:title) do
   = "#{@speaker.name} | Speakers"
 
-header.header.with-category
+header.header.with-category.speaker--header
   .row
     .large-12.columns
-      h5.category = link_to "Speakers", speakers_path
+      h5.category.breadcrumbs
+        => link_to "Home", root_path
+        ' &gt;
+        => link_to "Speakers", speakers_path
+        ' &gt;
+        = link_to @speaker.name, speaker_path(@speaker)
+  .row
+    .medium-3.columns
+    .medium-9.columns
       h1.title.header-1 = @speaker.name
+      h2.speaker--position = @speaker.position
+      h2.speaker--company = @speaker.company
 
 .content-container
   .row
-    .medium-4.columns
-      - if @speaker.photo.present?
-        = image_tag @speaker.photo_url
-      ul.fa-ul.speaker--links
-        - if @speaker.website_link.present?
-          li
-            i.fa.fa-li.fa-external-link
-            = link_to "website", @speaker.website_link, target: "_blank"
-        - if @speaker.linkedin_link.present?
-          li
-            i.fa.fa-li.fa-linkedin-square
-            = link_to "linkedin", @speaker.linkedin_link, target: "_blank"
-        - if @speaker.twitter_link.present?
-          li
-            i.fa.fa-li.fa-twitter
-            = twitter_link(@speaker)
+    .medium-3.columns
+      .speaker--sidebar
+        - if @speaker.photo.present?
+          = image_tag @speaker.photo_url, class: "speaker--photo"
+        ul.fa-ul.speaker--links
+          - if @speaker.website_link.present?
+            li
+              i.fa.fa-li.fa-external-link
+              = link_to "website", @speaker.website_link, target: "_blank"
+          - if @speaker.linkedin_link.present?
+            li
+              i.fa.fa-li.fa-linkedin-square
+              = link_to "linkedin", @speaker.linkedin_link, target: "_blank"
+          - if @speaker.twitter_link.present?
+            li
+              i.fa.fa-li.fa-twitter
+              = twitter_link(@speaker)
 
-      - if @speaker.publications.any?
-        h3 Publications
-        - @speaker.publications.each do |publication|
-          .speaker--publication
-            = image_tag publication.image_url
-            .speaker--publication-info
-              .speaker--publication-type = publication.publication_type
-              = link_to publication.title, publication.url, target: "_blank"
-            .speaker--publication-footer
+        - if @speaker.publications.any?
+          h3 Publications
+          - @speaker.publications.each do |publication|
+            .speaker--publication
+              = image_tag publication.image_url
+              .speaker--publication-info
+                .speaker--publication-type = publication.publication_type
+                = link_to publication.title, publication.url, target: "_blank"
+              .speaker--publication-footer
 
-    .medium-8.columns
-      .text-intro = @speaker.name
-      p
-        = @speaker.position
-        br
-        = @speaker.company
+    .medium-6.columns
       .speaker--description == simple_format @speaker.bio
 
       h3 = "#{@speaker.first_name} will present or conduct"
@@ -50,13 +56,9 @@ header.header.with-category
         - @speaker.programmes.order(category: :asc).each do |programme|
           = render partial: "programmes/tile", locals: { programme: programme }
 
-  / .speaker--more-speakers
-  /   .row
-  /     .large-4.columns
-  /       h2.header-3.downcase View more speakers
-  /
-  /   - @more_speakers.each_slice(4) do |row|
-  /     .row
-  /       - row.each do |speaker|
-  /         .medium-3.columns
-  /           = render partial: "speakers/tile", locals: { speaker: speaker }
+    .medium-3.columns
+      .speaker--more-speakers
+        h2.header-3.downcase View more speakers
+
+        - @more_speakers.each do |speaker|
+          = render partial: "speakers/tile", locals: { speaker: speaker }

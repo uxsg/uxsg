@@ -11,6 +11,7 @@ input
   margin-top: 2rem
 
 header.header
+  text-shadow: 0 1px 1px rgba(0,0,0,0.75)
   p
     color: white
   .title
@@ -20,6 +21,9 @@ header.header
     @media #{$small-only}
       margin-top: 1em
   &.with-category
+    .breadcrumbs
+      a
+        text-decoration: underline
     .category
       color: white
       text-transform: lowercase
