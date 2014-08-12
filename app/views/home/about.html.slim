@@ -35,28 +35,28 @@
     .medium-12.columns
       h3.header-4.text-center Experience Design
 
-  - @experience.each_slice(2) do |row|
+  - @experience.each_slice(3) do |row|
     .row
       - row.each do |volunteer|
-        .medium-6.columns
+        .medium-4.columns
           = render partial: "volunteers/tile", locals: { volunteer: volunteer }
 
   .row
     .medium-12.columns
       h3.header-4.text-center Operations
 
-  - @operations.each_slice(2) do |row|
+  - @operations.each_slice(3) do |row|
     .row
       - row.each do |volunteer|
-        .medium-6.columns
+        .medium-4.columns
           = render partial: "volunteers/tile", locals: { volunteer: volunteer }
 
   .row
     .medium-12.columns
       h3.header-4.text-center Product & Marketing
 
-  - @product.each_slice(2) do |row|
+  - @product.each_slice(3) do |row|
     .row
       - row.each do |volunteer|
-        .medium-6.columns
+        .medium-4.columns
           = render partial: "volunteers/tile", locals: { volunteer: volunteer }
