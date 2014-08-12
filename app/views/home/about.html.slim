@@ -39,7 +39,7 @@
     .row
       - row.each do |volunteer|
         .medium-6.columns
-          = render partial: "volunteers/tile", local: { volunteers: volunteer }
+          = render partial: "volunteers/tile", locals: { volunteers: volunteer }
 
   .row
     .medium-12.columns
@@ -59,4 +59,4 @@
     .row
       - row.each do |volunteer|
         .medium-6.columns
-          = render partial: "volunteers/tile", local: { volunteers: volunteer }
+          = render partial: "volunteers/tile", locals: { volunteers: volunteer }
