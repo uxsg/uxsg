@@ -4,4 +4,7 @@ class AccommodationsController < ApplicationController
 
   def bugis
   end
+
+  def lavender
+  end
 end
