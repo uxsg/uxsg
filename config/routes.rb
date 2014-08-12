@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/privacy" => "home#privacy", as: :privacy
   get "/terms" => "home#terms", as: :terms
   get "/venue" => "home#venue", as: :venue
+  get "/volunteer" => "home#volunteer", as: :volunteer
 
   resource :contact, controller: :contact, only: [:show, :create]
 
