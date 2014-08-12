@@ -4,7 +4,9 @@ class HomeController < ApplicationController
   end
 
   def about
-    @volunteers = Volunteer.all.order(last_name: :asc)
+    @experience = Volunteer.where(team: "experience design").order(last_name: :asc)
+    @operations = Volunteer.where(team: "operations").order(last_name: :asc)
+    @product = Volunteer.where(team: "product & marketing").order(last_name: :asc)
   end
 
   def call_for_submissions

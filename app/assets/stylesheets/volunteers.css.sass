@@ -1,0 +1,29 @@
+.volunteer-tile
+  margin-bottom: 1rem
+
+.volunteer-tile--photo img
+  width: 100%
+  border-radius: rem-calc(500)
+
+.volunteer-tile--details
+  padding: 3rem 0
+  @media #{$small-only}
+    padding: 0.25rem 0.5rem
+.speaker--more-speakers .volunteer-tile--details
+  padding: 0 0.5rem
+  .volunteer-tile--name
+    font-size: 1em
+  .volunteer-tile--profile
+    font-size: 0.7em
+
+.volunteer-tile--name
+  font-size: rem-calc(22)
+
+.volunteer-tile--profile
+  font-size: rem-calc(14)
+  margin-bottom: 0
+
+.volunteer-tile--details.unpublished .volunteer-tile--name
+  line-height: rem-calc(75)
+  @media #{$small-only}
+    line-height: rem-calc(88)

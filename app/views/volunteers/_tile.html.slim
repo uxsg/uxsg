@@ -1,0 +1,15 @@
+.volunteer-tile
+  .row
+    - if volunteer.photo.present?
+      .medium-4.columns
+        .volunteer-tile--photo
+          = link_to volunteer do
+            = image_tag volunteer.photo, alt: volunteer.name
+
+    .medium-8.columns.end
+      .volunteer-tile--details
+        .volunteer-tile--name = link_to volunteer.name
+        p.volunteer-tile--profile
+          = volunteer.position
+          br
+          = volunteer.company
