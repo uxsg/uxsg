@@ -3,13 +3,22 @@
     - if volunteer.photo.present?
       .medium-4.columns
         .volunteer-tile--photo
-          = link_to volunteer do
+          = link_to "#", data: { "reveal-id" => "volunteer-#{volunteer.id}" } do
             = image_tag volunteer.photo, alt: volunteer.name
 
     .medium-8.columns.end
       .volunteer-tile--details
-        .volunteer-tile--name = link_to volunteer.name
+        .volunteer-tile--name = link_to volunteer.name, "#", data: { "reveal-id" => "volunteer-#{volunteer.id}" }
         p.volunteer-tile--profile
           = volunteer.position
           br
           = volunteer.company
+
+  .volunteer--modal.reveal-modal id="volunteer-#{volunteer.id}" data-reveal=""
+    .row
+      .medium-4.columns
+        = image_tag volunteer.photo, title: volunteer.name, class: "volunteer--photo"
+      .medium-8.columns
+        h3 = volunteer.name
+
+        .volunteer--bio == volunteer.bio
