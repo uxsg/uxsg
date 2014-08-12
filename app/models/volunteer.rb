@@ -1,4 +1,6 @@
 class Volunteer < ActiveRecord::Base
+  mount_uploader :photo, SpeakerImageUploader
+
   validates :first_name, :last_name, :position, :company, :bio, presence: true
 
   def name
@@ -29,6 +31,7 @@ class Volunteer < ActiveRecord::Base
       field :position
       field :company
       field :bio, :wysihtml5
+      field :photo
     end
   end
 end
