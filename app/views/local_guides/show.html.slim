@@ -1,0 +1,24 @@
+= content_for(:title) do
+  => @guide.title
+  | Live Like a Local
+
+.row
+  .medium-12.columns
+    header.header
+      h3.header-1.title Plan Your Stay
+
+      = render partial: "home/venue_menu"
+
+.content-container
+  .row
+    .medium-8.columns
+      p.text-intro
+        ' We have a list of activities for the adventurous you who wants to
+        ' experience Singapore like a Singaporean:
+  .row
+    .medium-8.columns
+      = simple_format @guide.content
+    .medium-4.columns
+      ul.local-guides-menu
+        - @guides.each do |guide|
+          li class="#{'active' if current_page?(local_guide_path(guide))}" = link_to guide.title, local_guide_path(guide)
