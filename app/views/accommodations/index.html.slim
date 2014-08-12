@@ -1,0 +1,179 @@
+= content_for(:title) do
+  | Official Hotel | Accommodations
+
+.row
+  .medium-12.columns
+    header.header
+      h3.header-1.title Plan Your Stay
+
+      = render partial: "home/venue_menu"
+
+.content-container
+  .row
+    .medium-12.columns
+      = render partial: "accommodations/menu"
+
+  .row
+    .medium-12.columns
+      h1.header-2 Park Avenue Rochester
+      p.header-3 Our official conference hotel is only 5 to 7 minutes walk to The Star Performing Arts Centre.
+
+  .row
+    .medium-6.columns
+      = image_tag "accommodation/park_avenue_rochester.png"
+    .medium-6.columns
+      p = image_tag "accommodation/park_avenue_logo.png"
+      p
+        ' Park Avenue Rochester showcases 271 contemporary business hotel rooms
+        ' and services suites targeted at discerning expatriates working in the
+        ' business hub of one-north. With the excellent service from all the
+        ' staff and great facilities, it is a definitely a stay you won't regret!
+
+      p = link_to "www.parkavenuerochester.com", "http://www.parkavenuerochester.com", target: "_blank"
+
+      table.accommodation--details
+        tbody
+          tr
+            td &bull; Address
+            td
+              ' : 31 Rochester Drive
+          tr
+            td &bull; Wifi
+            td
+              ' :
+              i.fa.fa-check
+              |  (Free)
+          tr
+            td &bull; Reviews
+            td
+              ' : 75%
+              = link_to "view tripadvisor reviews", "", class: "accommodation--trip-advisor-link"
+          tr
+            td colspan="2" &bull; Proximity (from MRT stn): 306 metres
+
+  .row
+    .medium-12.columns
+      h2.header-3.accommodation--room-header Hotel rooms
+
+  .row
+    .medium-6.columns
+      .row
+        .medium-6.columns = image_tag "accommodation/park_avenue_room_1.png"
+        .medium-6.columns = image_tag "accommodation/park_avenue_room_2.png"
+    .medium-6.columns
+      table.accommodation--room-details
+        tr
+          td.room--name Superior Room
+          / td.room--price S$ 198++/night
+        tr
+          td.room--size 19 &ndash; 20 sqm
+          / td.room--before-price
+          /   ' Usual Price:
+          /   span.strikethrough S$320++/night
+      table.accommodation--room-details
+        tr
+          td.room--name Deluxe Room
+        tr
+          td.room--size 21 &ndash; 24 sqm
+
+  .row
+    .medium-12.columns
+      h2.header-3.accommodation--room-header One-bedroom suites
+
+  .row
+    .medium-6.columns
+      .row
+        .medium-6.columns = image_tag "accommodation/park_avenue_1_room_suite_1.png"
+    .medium-6.columns
+      table.accommodation--room-details
+        tr
+          td.room--name Superior
+        tr
+          td.room--size
+            ' 40 &ndash; 41 sqm
+            span.break with living room and kitchenette
+      table.accommodation--room-details
+        tr
+          td.room--name Deluxe
+        tr
+          td.room--size
+            ' 43 &ndash; 51 sqm
+            span.break with living room and kitchenette
+      table.accommodation--room-details
+        tr
+          td.room--name Super Deluxe
+        tr
+          td.room--size
+            ' 43 sqm
+            span.break with living room and kitchenette
+
+  .row
+    .medium-12.columns
+      h2.header-3.accommodation--room-header Two-bedroom suites
+
+  .row
+    .medium-6.columns
+      .row
+        .medium-6.columns = image_tag "accommodation/park_avenue_2_room_suite_1.png"
+        .medium-6.columns = image_tag "accommodation/park_avenue_2_room_suite_2.png"
+    .medium-6.columns
+      table.accommodation--room-details
+        tr
+          td.room--name Executive Superior
+        tr
+          td.room--size
+            ' 63 sqm
+            span.break with living room and kitchenette
+        tr
+          td
+            ' Configuration of the Superior two-bedroom apartment (up to four persons)
+            ' are as follows:
+            ul
+              li Master bedroom: 1 king-sized bed
+              li Second bedroom: 2 super-single beds
+
+  .row
+    .medium-6.columns
+      h3.header-4.accommodation--room-header Extra bed requests for bedroom suites
+      p.accommodation--notes
+        ' Extra bed upon request and subject to availability is available for
+        ' serviced suites only, chargeable at S$60.00 nett per room per night.
+        ' Occupants above 12 years of age would require and extra bed if sharing
+        ' with 2 adults in the serviced suites. Baby crib is complimentary and
+        ' subject to availability.
+    .medium-6.columns
+      h3.header-4.accommodation--room-header Bedroom suites includes
+      ul.accommodation--notes
+        li Home Theatre Dock for iPod & iPhone, featuring DVD, CD & USB memory playback
+        li Writing desk
+        li Telephone with voicemail facilities
+        li Iron and ironing board
+        li Cooking hob and hood
+        li Microwave ovven
+        li Toaster
+        li Rice-cooker
+        li Electric kettle
+        li Crockery, cutlery & utensils
+        li Washing machine cum dryer
+        li Laundry Powder
+
+.content-footer-container
+  .row
+    .medium-6.columns
+      h3.header-4 Make reservations
+      p.accommodation--notes
+        ' To enjoy the discounted corporate rate during the conference, send an
+        ' email to
+        = mail_to "pareservations@uel.sg"
+        ' , quoting "UX Consulting Pte Ltd" during the booking.
+        p = mail_to "pareservations@uel.sg", "Email to get a corporate rate", class: "small button yellow"
+    .medium-6.columns
+      h3.header-4 All above room rates include
+      ul.accommodation--notes
+        li Free local calls
+        li Wireless internet
+        li Utilities (unlimited)
+        li Daily housekeeping
+      p.accommodation--notes
+        ' * Breakfast is not included. Breakfast vouchers can be purchased at
+        ' the front desk at S$10++ (S$11.77 nett) per pax per day.

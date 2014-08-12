@@ -1,0 +1,37 @@
+.accommodation--room-header
+  margin-top: 3rem
+  margin-bottom: 1rem
+
+.accommodation--notes
+  font-size: 0.77778rem
+
+table.accommodation--details
+  background: none
+  border: none
+
+table.accommodation--room-details
+  background: $background-callout
+  border: none
+  border-radius: $global-radius
+  width: 100%
+  tr
+    background: $background-callout
+  td
+    // width: 50%
+    ul
+      font-size: 0.77778rem
+      margin-top: 1rem
+      margin-bottom: 0
+  td.room--name
+    color: $action
+    font-size: 1.1em
+  td.room--price
+    color: $accent-alt
+    font-size: 1.1em
+    font-weight: bold
+    text-align: right
+  td.room--before-price
+    text-align: right
+    span.strikethrough
+      text-decoration: line-through
+  td.room--size
