@@ -1,0 +1,5 @@
+ul.header-nav.inline-list
+  li class="#{'active' if current_page?(venue_path)}" = link_to "Venue", venue_path
+  li class="#{'active' if current_page?(accommodations_path)}" = link_to "Accommodations", accommodations_path
+  li class="#{'active' if current_page?(live_like_a_local_path)}" = link_to "Live like a local", live_like_a_local_path
+  li class="#{'active' if current_page?(budgeting_path)}" = link_to "Budgeting", budgeting_path

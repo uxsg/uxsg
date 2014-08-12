@@ -31,6 +31,21 @@ header.header
         text-transform: lowercase
     .title
       margin-top: 0
+  .header-nav
+    margin-bottom: 0
+    li
+      background: $text-subtle
+      border-radius: $global-radius $global-radius 0 0
+      margin-left: 0.5rem
+      text-transform: lowercase
+      > a
+        color: $text
+        padding: 0.5rem 1rem
+    li.active
+      background: $background
+      > a
+        color: $accent
+
 
 footer.footer
   li
