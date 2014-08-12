@@ -1,0 +1,124 @@
+= content_for(:title) do
+  | Bugis | Accommodations
+
+.row
+  .medium-12.columns
+    header.header
+      h3.header-1.title Plan Your Stay
+
+      = render partial: "home/venue_menu"
+
+.content-container
+  .row
+    .medium-12.columns
+      = render partial: "accommodations/menu"
+
+  .row
+    .medium-9.columns
+      h1.header-2 Bugis
+      p
+        ' Bugis, a highly-populated area in Singapore, is a place that holds many
+        ' bittersweet memories. It was home for Singapore's Japanese community
+        ' before World War II, but has since been redeveloped with a vengeance
+        ' and has been transformed into a shopping and night life experience for
+        ' families and friends. A few of the popular areas for a "chill" night life
+        ' located in Bugis itself would be Arab Street and Kampong Glam.
+      p
+        ' For more information, visit:
+        span.break = link_to "http://wikitravel.org/en/Singapore/Bugis", "http://wikitravel.org/en/Singapore/Bugis", target: "_blank"
+
+  .row
+    .medium-12.columns
+      h2.header-3.accommodation--room-header 5footway.inn Project Bugis
+
+  .row
+    .medium-6.columns
+      .accommodation--photos
+        .row
+          .medium-6.columns = image_tag "accommodation/5footway_1.png"
+          .medium-6.columns = image_tag "accommodation/5footway_2.png"
+        .row
+          .medium-6.columns = image_tag "accommodation/5footway_3.png"
+          .medium-6.columns = image_tag "accommodation/5footway_4.png"
+    .medium-6.columns
+      p
+       ' Adopting the modern, clean and cosy concept, 5footway.inn Project Bugis
+       ' focuses on privacy and the design caters to families and small groups
+       ' of travellers. With its location just steps away from bars, restaurants
+       ' and heritage Kampong Glam, you won't be having a boring nightlife.
+
+      p = link_to "www.5footwayinn.com", "http://www.5footwayinn.com", target: "_blank"
+
+      table.accommodation--details
+        tbody
+          tr
+            td &bull; Address
+            td
+              ' : 10 Aliwal Street
+          tr
+            td &bull; Wifi
+            td
+              ' :
+              i.fa.fa-check
+              |  (Free)
+          tr
+            td &bull; Reviews
+            td
+              ' : 65%
+              = link_to "view tripadvisor reviews", "http://www.tripadvisor.com.sg/Hotel_Review-g294265-d3494084-Reviews-5footway_inn_Project_Bugis-Singapore.html", class: "accommodation--trip-advisor-link"
+          tr
+            td colspan="2" &bull; Proximity (from MRT stn): 591 metres
+
+      p
+        ' Pictures from
+        => link_to "www.5footwayinn.com", "http://www.5footwayinn.com", target: "_blank"
+        ' and
+        = link_to "www.asiarooms.com", "http://www.asianrooms.com", target: "_blank"
+
+  .row
+    .medium-12.columns
+      h2.header-3.accommodation--room-header Clover Hotel
+
+  .row
+    .medium-6.columns
+      .accommodation--photos
+        .row
+          .medium-6.columns = image_tag "accommodation/clover_1.png"
+          .medium-6.columns = image_tag "accommodation/clover_2.png"
+        .row
+          .medium-6.columns = image_tag "accommodation/clover_3.png"
+          .medium-6.columns = image_tag "accommodation/clover_4.png"
+    .medium-6.columns
+      p
+       ' One of the finest boutique hotels with a modern living ethnic setting,
+       ' situated in Kampong Glam, the multiethnic cultural nucleus of Singapore.
+       ' Every facility in Clover Hotel is thoughtfully designed and it would
+       ' definitely leave you in awe.
+
+      p = link_to "www.hotelclover.com", "http://www.hotelclover.com", target: "_blank"
+
+      table.accommodation--details
+        tbody
+          tr
+            td &bull; Address
+            td
+              ' : 769 North Bridge Road
+          tr
+            td &bull; Wifi
+            td
+              ' :
+              i.fa.fa-check
+              |  (Free)
+          tr
+            td &bull; Reviews
+            td
+              ' : 84%
+              = link_to "view tripadvisor reviews", "http://www.tripadvisor.com.sg/Hotel_Review-g294265-d4328268-Reviews-Hotel_Clover_769_North_Bridge_Road-Singapore.html", class: "accommodation--trip-advisor-link"
+          tr
+            td colspan="2" &bull; Proximity (from MRT stn): 507 metres
+
+      p
+        ' Pictures from
+        => link_to "www.hotelclover.com", "http://www.hotelclover.com", target: "_blank"
+        ' and
+        = link_to "www.asiarooms.com", "http://www.asianrooms.com", target: "_blank"

@@ -3,12 +3,24 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "/call-for-submissions" => "home#call_for_submissions", as: :call_for_submissions
+  get "/plan-your-stay/live-like-a-local" => "home#live_like_a_local", as: :live_like_a_local
+  get "/plan-your-stay/budgeting" => "home#budgeting", as: :budgeting
   get "/privacy" => "home#privacy", as: :privacy
   get "/terms" => "home#terms", as: :terms
   get "/venue" => "home#venue", as: :venue
   get "/volunteer" => "home#volunteer", as: :volunteer
 
   resource :contact, controller: :contact, only: [:show, :create]
+
+  get "/plan-your-stay", to: redirect("/plan-your-stay/accommodations")
+  scope "/plan-your-stay" do
+    resources :accommodations, only: :index do
+      collection do
+        get :bugis
+        get :lavender
+      end
+    end
+  end
 
   get "/programme/:type/:id" => "programmes#show"
   resources :programme, only: [:index, :show], controller: :programmes

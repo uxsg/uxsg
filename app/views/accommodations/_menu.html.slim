@@ -1,0 +1,4 @@
+ul.accommodations-menu.inline-list
+  li class="#{'active' if current_page?(accommodations_path)}" = link_to "Official hotel", accommodations_path
+  li class="#{'active' if current_page?(bugis_accommodations_path)}" = link_to "Bugis", bugis_accommodations_path
+  li class="#{'active' if current_page?(lavender_accommodations_path)}" = link_to "Lavender", lavender_accommodations_path
