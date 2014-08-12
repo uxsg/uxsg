@@ -3,6 +3,10 @@ class HomeController < ApplicationController
     @updates = Article.published.order(published_at: :desc)
   end
 
+  def about
+    @volunteers = Volunteer.all.order(last_name: :asc)
+  end
+
   def call_for_submissions
   end
 
