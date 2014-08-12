@@ -1,14 +1,18 @@
 - content_for(:title) do
   | Speakers
 
-header.header
+header.header.with-category
   .row
     .large-12.columns
+      h5.category.breadcrumbs
+        => link_to "Home", root_path
+        ' &gt;
+        => link_to "Speakers", speakers_path
       h1.title.header-1 speakers
 
 .content-container
-  - @speakers.each_slice(4) do |row|
+  - @speakers.each_slice(2) do |row|
     .row
       - row.each do |speaker|
-        .medium-3.columns.end
+        .medium-6.columns.end
           = render partial: "speakers/tile", locals: { speaker: speaker }

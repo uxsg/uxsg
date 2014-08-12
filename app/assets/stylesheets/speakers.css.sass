@@ -1,3 +1,21 @@
+header.speaker--header
+  .title
+    margin-bottom: 0
+  .speaker--position, .speaker--company
+    color: white
+    font-size: 1rem
+    font-weight: normal
+    line-height: 1.2em
+
+.speaker--sidebar
+  @media #{$medium-up}
+    margin-top: -150px
+    height: 100vh
+
+.speaker--photo
+  border-radius: rem-calc(500)
+  width: 100%
+
 .speaker--more-speakers
   margin-top: 2rem
 
@@ -30,25 +48,19 @@
   margin-bottom: 2rem
 
 .speaker-tile
-  background-color: $background-callout
-  border-radius: $global-radius
   margin-bottom: 1rem
 
 .speaker-tile--photo img
   width: 100%
-  border-radius: $global-radius $global-radius 0 0
-  @media #{$small-only}
-    border-radius: $global-radius 0 0 $global-radius
+  border-radius: rem-calc(500)
 
 .speaker-tile--details
-  background-color: $background-callout
-  border-radius: $global-radius
-  padding: 0.5rem 1rem
+  padding: 3rem 0
   @media #{$small-only}
     padding: 0.25rem 0.5rem
 
 .speaker-tile--name
-  font-size: rem-calc(16)
+  font-size: rem-calc(22)
 
 .speaker-tile--profile
   font-size: rem-calc(14)
