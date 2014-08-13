@@ -190,6 +190,59 @@
 
   .row
     .medium-12.columns
+      h2.header-3.accommodation--room-header Blanc Inn
+
+  .row
+    .medium-6.columns
+      .accommodation--photos
+        .row
+          .medium-6.columns = image_tag "accommodation/blanc_inn_1.png"
+          .medium-6.columns = image_tag "accommodation/blanc_inn_2.png"
+        .row
+          .medium-6.columns = image_tag "accommodation/blanc_inn_3.png"
+          .medium-6.columns = image_tag "accommodation/blanc_inn_4.png"
+    .medium-6.columns
+      p
+        ' Known as one of the top five hostels/inns in Singapore, Blanc Inn
+        ' provides a memorable comfort and elegant stay with its unique design.
+        ' Despite calling itself a hostel, Blanc Inn stays away from the concept
+        ' of having bunk beds like a typical dormitory and instead offers privacy
+        ' so that guests do not end up sleeping with strangers.
+
+      p = link_to "www.inn.com.sg", "http://www.inn.com.sg", target: "_blank"
+
+      table.accommodation--details
+        tbody
+          tr
+            td &bull; Address
+            td
+              ' : 151 Tyrwhitt Road
+          tr
+            td &bull; Wifi
+            td
+              ' :
+              i.fa.fa-check
+              |  (Free)
+          tr
+            td &bull; Reviews
+            td
+              ' : 82%
+              = link_to "view tripadvisor reviews", "http://www.tripadvisor.com.sg/Hotel_Review-g294265-d4328392-Reviews-Blanc_Inn-Singapore.html", class: "accommodation--trip-advisor-link"
+          tr
+            td &bull; Indicative Price
+            td
+              | : S$53-71
+          tr
+            td colspan="2" &bull; Proximity (from MRT stn): 587 metres
+
+      p
+        ' Pictures from
+        => link_to "www.inn.com.sg", "http://www.inn.com.sg", target: "_blank"
+        ' and
+        = link_to "www.tripadvisor.com.sg", "http://www.tripadvisor.com.sg", target: "_blank"
+
+  .row
+    .medium-12.columns
       | Indicative prices are based on:
       ul
         li per person, per night
