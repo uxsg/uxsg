@@ -18,14 +18,34 @@
   .time
     font-size: 0.8em
 
-.programme-tile--time
-  color: $accent
-  padding: 0.5rem 1rem
-  .meridiem
-    font-size: 0.3em
-
 .programme-tile--details
   background-color: $background-callout
   border-radius: $global-radius
   .byline, .description
     margin-bottom: 0.5em
+
+.programme-timeline-tile
+  margin-bottom: 0.5rem
+
+  .programme-tile--time
+    padding: 0.5rem
+    color: $accent
+    line-height: 0.8em
+    text-align: right
+    width: 100%
+    .meridiem
+      font-size: 0.3em
+
+  .programme-tile--details
+    padding: 0.25rem 0.5rem
+
+  .programme-tile--category
+    font-size: rem-calc(12)
+    line-height: 1em
+    text-transform: uppercase
+
+  .programme-tile--industry
+    font-size: rem-calc(12)
+
+  .programme-tile--byline
+    font-size: rem-calc(12)

@@ -35,28 +35,19 @@ header.header
       p.text-intro We haven't confirmed the time slots for each programme item, but you can have a preview of the confirmed items below!
 
   .row
-    .medium-6.columns
-      h2.header-3 Keynotes
-      - @programmes.keynotes.each do |programme|
-        - unless programme.speakers.map { |s| s.published? }.include?(false)
-          = render partial: "programmes/programme_tile", locals: { programme: programme }
-    .medium-6.columns
-      h2.header-3 Workshops
-      - @programmes.workshops.each do |programme|
-        - unless programme.speakers.map { |s| s.published? }.include?(false)
-          = render partial: "programmes/programme_tile", locals: { programme: programme }
+    .medium-4.columns
+      h2.text-center Day 1
+      - @day_1.each do |programme|
+        = render partial: "programmes/programme_tile", locals: { programme: programme }
+    .medium-4.columns
+      h2.text-center Day 2
+      - @day_2.each do |programme|
+        = render partial: "programmes/programme_tile", locals: { programme: programme }
+    .medium-4.columns
+      h2.text-center Day 3
+      - @day_3.each do |programme|
+        = render partial: "programmes/programme_tile", locals: { programme: programme }
 
-/   - if @day_1.present?
-/     .row
-/       .medium-12.columns
-/         h2.header-2 conference day 1
-/         p.text-intro Wednesday, October 1st
-/
-/     - @day_1.each do |programme|
-/       .row
-/         .medium-8.columns
-/           = render partial: "programmes/tile", locals: { programme: programme }
-/
 / - if @day_2.present?
 /   .row
 /     .medium-12.columns
