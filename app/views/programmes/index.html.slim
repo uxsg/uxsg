@@ -32,7 +32,7 @@ header.header
 
   .row
     .medium-12.columns
-      p.text-intro We haven't confirmed the time slots for each programme item, but you can have a preview of the confirmed items below!
+      p.text-intro We haven't finalised all the programme items, but you can have a preview of the confirmed items below!
 
   .row
     .medium-4.columns
@@ -47,25 +47,3 @@ header.header
       h2.text-center Day 3
       - @day_3.each do |programme|
         = render partial: "programmes/programme_tile", locals: { programme: programme }
-
-/ - if @day_2.present?
-/   .row
-/     .medium-12.columns
-/       h2.header-2 conference day 2
-/       p.text-intro Thursday, October 2nd
-/
-/   - @day_2.each do |programme|
-/     .row
-/       .medium-8.columns
-/         = render partial: "programmes/tile", locals: { programme: programme }
-/
-/ - if @day_3.present?
-/   .row
-/     .medium-12.columns
-/       h2.header-2 conference day 3
-/       p.text-intro Friday, October 3rd
-/
-/   - @day_3.each do |programme|
-/     .row
-/       .medium-8.columns
-/         = render partial: "programmes/tile", locals: { programme: programme }
