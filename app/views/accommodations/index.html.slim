@@ -63,18 +63,12 @@
     .medium-6.columns
       table.accommodation--room-details
         tr
-          td.room--name Superior Room
-          / td.room--price S$ 198++/night
-        tr
-          td.room--size 19 &ndash; 20 sqm
-          / td.room--before-price
-          /   ' Usual Price:
-          /   span.strikethrough S$320++/night
+          td.room--name Single Occupancy
+          td.room--price S$220++/night
       table.accommodation--room-details
         tr
-          td.room--name Deluxe Room
-        tr
-          td.room--size 21 &ndash; 24 sqm
+          td.room--name Double Occupancy
+          td.room--price S$240++/night
 
   .row
     .medium-12.columns
@@ -87,25 +81,12 @@
     .medium-6.columns
       table.accommodation--room-details
         tr
-          td.room--name Superior
-        tr
-          td.room--size
-            ' 40 &ndash; 41 sqm
-            span.break with living room and kitchenette
+          td.room--name Single Occupancy
+          td.room--price S$250++/night
       table.accommodation--room-details
         tr
-          td.room--name Deluxe
-        tr
-          td.room--size
-            ' 43 &ndash; 51 sqm
-            span.break with living room and kitchenette
-      table.accommodation--room-details
-        tr
-          td.room--name Super Deluxe
-        tr
-          td.room--size
-            ' 43 sqm
-            span.break with living room and kitchenette
+          td.room--name Double Occupancy
+          td.room--price S$ 270++/night
 
   .row
     .medium-12.columns
@@ -119,18 +100,12 @@
     .medium-6.columns
       table.accommodation--room-details
         tr
-          td.room--name Executive Superior
+          td.room--name Double Occupancy
+          td.room--price S$350++/night
+      table.accommodation--room-details
         tr
-          td.room--size
-            ' 63 sqm
-            span.break with living room and kitchenette
-        tr
-          td
-            ' Configuration of the Superior two-bedroom apartment (up to four persons)
-            ' are as follows:
-            ul
-              li Master bedroom: 1 king-sized bed
-              li Second bedroom: 2 super-single beds
+          td.room--name 4-Occupancy
+          td.room--price S$390++/night
 
   .row
     .medium-6.columns
@@ -162,18 +137,16 @@
     .medium-6.columns
       h3.header-4 Make reservations
       p.accommodation--notes
-        ' To enjoy the discounted corporate rate during the conference, send an
-        ' email to
-        = mail_to "pareservations@uel.sg"
-        ' , quoting "UX Consulting Pte Ltd" during the booking.
-        p = mail_to "pareservations@uel.sg", "Email to get a corporate rate", class: "small button yellow"
+        ' To enjoy discounted corporate rates during the conference period,
+        ' download the booking form, complete it and send it to
+        = mail_to "pagroups@uel.sg"
+        ' .
+        p = link_to "Download booking form", "/uxsg2014_hotel_booking_form.pdf", class: "small button yellow"
     .medium-6.columns
       h3.header-4 All above room rates include
       ul.accommodation--notes
-        li Free local calls
-        li Wireless internet
-        li Utilities (unlimited)
-        li Daily housekeeping
+        li Daily breakfast
+        li Unlimited wifi access
+        li Unlimited local calls
       p.accommodation--notes
-        ' * Breakfast is not included. Breakfast vouchers can be purchased at
-        ' the front desk at S$10++ (S$11.77 nett) per pax per day.
+        ' * Additional breakfast may be arranged at S$20++ per person per day.
