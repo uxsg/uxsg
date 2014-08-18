@@ -9,12 +9,11 @@
             span.year 2014
     section.top-bar-section
       ul.right
+        li = link_to "updates", updates_path
         li = link_to "speakers", speakers_path
         li = link_to "programme", "/programme"
         li = link_to "venue", venue_path
         li = link_to "sponsors", sponsors_path
-        li = link_to "call for submissions", call_for_submissions_path, onclick: %Q(ga('send', 'event', 'Menu', 'Desktop Nav', 'Call for Submissions'))
         li = link_to "volunteer", volunteer_path
-        li = link_to "news", updates_path
         li = link_to "faq", "https://uxsg.uservoice.com/knowledgebase"
         li = link_to "register", "https://uxsg-conference-2014.gevme.com", class: "button yellow", onclick: %Q(ga('send', 'event', 'Desktop Navigation', 'Early Bird Tickets'))
