@@ -34,6 +34,7 @@ class Programme < ActiveRecord::Base
       field :industry_track
       field :description, :wysihtml5
       field :speakers
+      field :sold_out
     end
   end
 end

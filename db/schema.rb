@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812195418) do
+ActiveRecord::Schema.define(version: 20140829160642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20140812195418) do
     t.datetime "updated_at"
     t.integer  "day"
     t.integer  "industry_track_id"
+    t.boolean  "sold_out"
   end
 
   add_index "programmes", ["speaker_id"], name: "index_programmes_on_speaker_id", using: :btree
