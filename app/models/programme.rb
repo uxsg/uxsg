@@ -1,5 +1,5 @@
 class Programme < ActiveRecord::Base
-  extend FriendlyId
+  include Sluggable
   friendly_id :title, use: :slugged
 
   has_many :programme_speakers

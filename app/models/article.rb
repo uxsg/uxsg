@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  extend FriendlyId
+  include Sluggable
   friendly_id :title, use: :slugged
 
   mount_uploader :lead_image, ArticleImageUploader

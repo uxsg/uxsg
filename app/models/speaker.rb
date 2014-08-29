@@ -1,5 +1,5 @@
 class Speaker < ActiveRecord::Base
-  extend FriendlyId
+  include Sluggable
   friendly_id :name, use: :slugged
 
   mount_uploader :photo, SpeakerImageUploader

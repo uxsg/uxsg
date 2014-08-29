@@ -1,5 +1,5 @@
 class LocalGuide < ActiveRecord::Base
-  extend FriendlyId
+  include Sluggable
   friendly_id :title, use: :slugged
 
   validates :title, :slug, :content, presence: true
