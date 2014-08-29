@@ -22,6 +22,10 @@
 
 var initializePage = function() {
   $(document).foundation();
+
+  $('.left-off-canvas-toggle').on('click', function() {
+    $('.left-off-canvas-menu > .off-canvas-list').css('top', $(window).scrollTop() + 'px');
+  });
 }
 
 $(document).ready(initializePage);
