@@ -1,4 +1,17 @@
 .off-canvas-wrap data-offcanvas=""
+  .mobile-top-bar.fixed
+    nav.tab-bar
+      section.left-small
+        a.left-off-canvas-toggle.menu-icon href="#"
+          span
+
+      section.right.tab-bar-section
+        .site-title
+          = link_to root_path, title: "UXSG Conference 2014" do
+            .logo UXSG
+            .conference
+              | conference
+              span.year 2014
   .inner-wrap
     = render partial: "layouts/navigation"
     .mobile-buffer
