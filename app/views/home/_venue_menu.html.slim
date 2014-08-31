@@ -1,5 +1,5 @@
 ul.header-nav.inline-list
   li class="#{'active' if current_page?(venue_path)}" = link_to "Venue", venue_path
-  li class="#{'active' if controller.controller_name == 'accommodations'}" = link_to "Accommodations", accommodations_path
+  li class="#{'active' if controller.controller_name == 'accommodations'}" = link_to "Accommodation", accommodations_path
   li class="#{'active' if controller.controller_name == 'local_guides'}" = link_to "Live like a local", local_guides_path
   / li class="#{'active' if current_page?(budgeting_path)}" = link_to "Budgeting", budgeting_path
