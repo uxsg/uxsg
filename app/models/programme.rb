@@ -7,11 +7,11 @@ class Programme < ActiveRecord::Base
 
   belongs_to :industry_track
 
-  enum category: { misc:                       0,
-                   keynote:                    1,
-                   workshop:                   2,
-                   tour:                       3,
-                   "lightning presentation" => 4 }
+  enum category: { misc:               0,
+                   keynote:            1,
+                   workshop:           2,
+                   tour:               3,
+                   "lightning talk" => 4 }
 
   scope :day_1, -> { where(day: 1) }
   scope :day_2, -> { where(day: 2) }
