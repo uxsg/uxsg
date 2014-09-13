@@ -1,25 +1,35 @@
 - photo ||= true
 
 .programme-timeline-tile
-  .row.collapse
-    .small-3.columns
-      .programme-tile--time
-        = programme.happens_at.strftime("%l:%M")
-        span.meridiem = programme.happens_at.strftime("%p")
-        - unless programme.category == "misc"
-          .programme-tile--category = programme.category.humanize
-    .small-9.columns
-      .programme-tile--details
-        - if programme.category == "misc"
-          .programme-tile--title = programme.title
-        - else
-          .programme-tile--title = link_to programme.title, programme
-          .programme-tile--byline
-            ' By
-            - speaker_links = programme.speakers.map { |s| link_to s.name, s }
-            == speaker_links.to_sentence
-            - if programme.industry_track.present?
-              .programme-tile--industry
-                ' Part of the
-                => programme.industry_track.name
-                ' industry track
+  .programme--icon = image_tag "icon-#{programme.category}.png"
+  .programme--details
+    .programme--category = programme.category.humanize
+    .programme--title = link_to programme.title, programme
+    .programme--speaker
+      ' By
+      - speaker_links = programme.speakers.map { |s| link_to s.name, s }
+      == speaker_links.to_sentence
+
+/ .programme-timeline-tile
+/   .row.collapse
+/     .small-3.columns
+/       .programme-tile--time
+/         = programme.happens_at.strftime("%l:%M")
+/         span.meridiem = programme.happens_at.strftime("%p")
+/         - unless programme.category == "misc"
+/           .programme-tile--category = programme.category.humanize
+/     .small-9.columns
+/       .programme-tile--details
+/         - if programme.category == "misc"
+/           .programme-tile--title = programme.title
+/         - else
+/           .programme-tile--title = link_to programme.title, programme
+/           .programme-tile--byline
+/             ' By
+/             - speaker_links = programme.speakers.map { |s| link_to s.name, s }
+/             == speaker_links.to_sentence
+/             - if programme.industry_track.present?
+/               .programme-tile--industry
+/                 ' Part of the
+/                 => programme.industry_track.name
+/                 ' industry track

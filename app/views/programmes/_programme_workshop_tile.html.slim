@@ -1,0 +1,8 @@
+- industry ||= false
+
+.programme--workshop class="#{'industry' if industry}"
+  .programme--title = link_to programme.title, programme
+  .programme--speaker
+    ' By
+    - speaker_links = programme.speakers.map { |s| link_to s.name, s }
+    == speaker_links.to_sentence
