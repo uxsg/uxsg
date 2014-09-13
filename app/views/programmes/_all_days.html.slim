@@ -1,0 +1,119 @@
+table.programme
+  thead
+    tr
+      th.time
+      th.day-header
+        h2.header-3.text-center Day 1
+        h3.header-4.text-center 1 Oct 2014
+      th.day-header
+        h2.header-3.text-center Day 2
+        h3.header-4.text-center 2 Oct 2014
+      th.day-header
+        h2.header-3.text-center Day 3
+        h3.header-4.text-center 3 Oct 2014
+  tbody
+    tr
+      th.time 8:00 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast & Registration
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast
+    tr
+      th.time 9:30 am
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_1.find_by(happens_at: Time.new(2014, 10, 1, 9, 30, 0, 0)) }
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_2.find_by(happens_at: Time.new(2014, 10, 2, 9, 30, 0, 0)) }
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-keynote.png"
+          .programme--details
+            .programme--category Lightning Talks A
+            .programme--title-list
+              ul
+                - @day_3.where(happens_at: Time.new(2014, 10, 3, 9, 30, 0, 0)).each do |programme|
+                  li = link_to programme.title, programme
+    tr
+      th.time 10:30 am
+      td colspan="3"
+        .programme-timeline-tile
+          .programme--icon.colspan-3 = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast
+    tr
+      th.time 11:00 am
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_1.find_by(happens_at: Time.new(2014, 10, 1, 11, 0, 0, 0)) }
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_2.find_by(happens_at: Time.new(2014, 10, 2, 11, 0, 0, 0)) }
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-keynote.png"
+          .programme--details
+            .programme--category Lightning Talks B
+            .programme--title-list
+              ul
+                - @day_3.where(happens_at: Time.new(2014, 10, 3, 11, 0, 0, 0)).each do |programme|
+                  li = link_to programme.title, programme
+    tr
+      th.time 12:00 pm
+      td colspan="3"
+        .programme-timeline-tile
+          .programme--icon.colspan-3 = image_tag "icon-lunch.png"
+          .programme--details.middle-align
+            .programme--title Lunch
+    tr
+      th.time 2:00 pm
+      td.programme-timeline-workshops colspan="2"
+        .programme-timeline-workshops
+          p Choose one industry track:
+          - IndustryTrack.all.order(name: :asc).each do |track|
+            - if track.programmes.any?
+              .programme-timeline-tile style="margin-bottom: 1rem;"
+                .programme--icon.colspan-2 = image_tag "icon-workshop.png"
+                .programme--details
+                  .programme--category = track.name
+                  - track.programmes.each do |programme|
+                    = render partial: "programmes/programme_workshop_tile", locals: { programme: programme, industry: true }
+          p OR choose two practitioner workshops:
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_3.find_by(happens_at: Time.new(2014, 10, 3, 14, 0, 0, 0)) }
+    tr
+      th.time 3:30 pm
+      td.programme-timeline-workshops rowspan="2"
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-workshop.png"
+          .programme--details
+            .programme--category Workshops &ndash; Select One
+            - @day_1.where(happens_at: Time.new(2014, 10, 1, 14, 0, 0, 0), industry_track_id: nil).each do |programme|
+              = render partial: "programmes/programme_workshop_tile", locals: { programme: programme }
+      td.programme-timeline-workshops rowspan="2"
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-workshop.png"
+          .programme--details
+            .programme--category Workshops &ndash; Select One
+            - @day_2.where(happens_at: Time.new(2014, 10, 2, 14, 0, 0, 0), industry_track_id: nil).each do |programme|
+              = render partial: "programmes/programme_workshop_tile", locals: { programme: programme }
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Afternoon Break
+    tr
+      th.time 4:00 pm
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_3.find_by(happens_at: Time.new(2014, 10, 3, 16, 00, 0, 0)) }
+    tr
+      th.time 6:30 pm
+      td
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-drinks.png"
+          .programme--details.middle-align
+            .programme--title Networking & Drinks
+      td

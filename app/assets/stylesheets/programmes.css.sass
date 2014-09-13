@@ -24,30 +24,127 @@
   .byline, .description
     margin-bottom: 0.5em
 
+// .programme-timeline-tile
+//   margin-bottom: 0.5rem
+//
+//   .programme-tile--time
+//     padding: 0.5rem
+//     color: $accent
+//     font-size: rem-calc(24)
+//     font-weight: 500
+//     line-height: 0.8em
+//     text-align: right
+//     width: 100%
+//     .meridiem
+//       font-size: rem-calc(10)
+//
+//   .programme-tile--details
+//     padding: 0.25rem 0.5rem
+//
+//   .programme-tile--category
+//     font-size: rem-calc(12)
+//     line-height: 1em
+//     text-transform: uppercase
+//
+//   .programme-tile--industry
+//     font-size: rem-calc(12)
+//
+//   .programme-tile--byline
+//     font-size: rem-calc(12)
+
+.programmes .tabs
+  dd
+    margin-right: 0.5rem
+    &:last-child
+      margin-right: 0
+    > a
+      padding: 0.5rem 1.25rem
+
 .programme-timeline-tile
-  margin-bottom: 0.5rem
-
-  .programme-tile--time
-    padding: 0.5rem
-    color: $accent
-    font-size: rem-calc(24)
-    font-weight: 500
-    line-height: 0.8em
-    text-align: right
-    width: 100%
-    .meridiem
+  border-spacing: 0
+  display: table
+  height: 100%
+  width: 100%
+  .programme--icon
+    background: white
+    border-radius: $global-radius 0 0 $global-radius
+    display: table-cell
+    padding: 10px
+    text-align: center
+    width: 15%
+    &.colspan-2
+      width: 7%
+    &.colspan-3
+      width: 4.5%
+    > img
+      width: 24px
+  .programme--details
+    background: $background-callout
+    border-radius: 0 $global-radius $global-radius 0
+    display: table-cell
+    padding: 10px
+    width: 85%
+    vertical-align: top
+  .programme--category
+    margin-bottom: 1em
+  .programme--speaker
+    margin-top: 1em
+  .programme--title
+    font-size: rem-calc(18)
+    font-weight: bold
+    line-height: 1.3em
+    a
+      color: $accent
+  .programme--title-list ul
+    font-size: rem-calc(14)
+    margin-bottom: 0
+  .programme--workshop
+    background: $action
+    border-radius: $global-radius
+    color: white
+    margin-bottom: 0.5rem
+    padding: rem-calc(5)
+    &.industry
+      background: $accent-alt
+    .programme--title
+      font-size: rem-calc(14)
+      > a
+        color: white
+    .programme--speaker
       font-size: rem-calc(10)
+      margin-top: 0.5em
+      > a
+        color: white
 
-  .programme-tile--details
-    padding: 0.25rem 0.5rem
-
-  .programme-tile--category
-    font-size: rem-calc(12)
-    line-height: 1em
-    text-transform: uppercase
-
-  .programme-tile--industry
-    font-size: rem-calc(12)
-
-  .programme-tile--byline
-    font-size: rem-calc(12)
+table.programme
+  background: none
+  border: none
+  border-spacing: 0
+  thead
+    background: none
+  td
+    // Silly fix for CSS table height 100% needing container height to be specified
+    height: 30px
+    vertical-align: top
+    @media #{$small-only}
+      padding-left: 0
+      padding-right: 0
+  .programme-timeline-workshops
+    background: #DDD
+    > p
+      font-weight: bold
+      margin-bottom: 0
+  td.programme-timeline-workshops
+    @media #{$small-only}
+      padding: 0.5rem 0.55556rem
+  .time
+    font-size: rem-calc(18)
+    padding-top: rem-calc(15)
+    text-align: right
+    width: 10%
+    vertical-align: top
+    @media #{$small-only}
+      font-size: rem-calc(10)
+      padding-left: 0
+  .day-header
+    width: 30%
