@@ -21,8 +21,19 @@ header.header
   .row
     .medium-12.columns
       - if is_mobile_device?
-        = render partial: "programmes/day_1"
-        = render partial: "programmes/day_2"
-        = render partial: "programmes/day_3"
+        dl.tabs data-tab=""
+          dd.active = link_to "Day 1", "#day1"
+          dd = link_to "Day 2", "#day2"
+          dd = link_to "Day 3", "#day3"
+
+        .tabs-content
+          #day1.content.active = render partial: "programmes/day_1"
+          #day2.content = render partial: "programmes/day_2"
+          #day3.content = render partial: "programmes/day_3"
+
+        dl.tabs data-tab=""
+          dd.active = link_to "Day 1", "#day1"
+          dd = link_to "Day 2", "#day2"
+          dd = link_to "Day 3", "#day3"
       - else
         = render partial: "programmes/all_days"
