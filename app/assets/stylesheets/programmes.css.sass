@@ -119,16 +119,25 @@ table.programme
     // Silly fix for CSS table height 100% needing container height to be specified
     height: 30px
     vertical-align: top
+    @media #{$small-only}
+      padding-left: 0
+      padding-right: 0
   .programme-timeline-workshops
     background: #DDD
     > p
       font-weight: bold
       margin-bottom: 0
+  td.programme-timeline-workshops
+    @media #{$small-only}
+      padding: 0.5rem 0.55556rem
   .time
     font-size: rem-calc(18)
     padding-top: rem-calc(15)
     text-align: right
     width: 10%
     vertical-align: top
+    @media #{$small-only}
+      font-size: rem-calc(10)
+      padding-left: 0
   .day-header
     width: 30%

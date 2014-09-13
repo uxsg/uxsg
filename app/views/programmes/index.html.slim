@@ -42,7 +42,12 @@ header.header
 
   .row
     .medium-12.columns
-      = render partial: "programmes/all_days"
+      - if is_mobile_device?
+        = render partial: "programmes/day_1"
+        = render partial: "programmes/day_2"
+        = render partial: "programmes/day_3"
+      - else
+        = render partial: "programmes/all_days"
 
   .row
     .medium-4.columns

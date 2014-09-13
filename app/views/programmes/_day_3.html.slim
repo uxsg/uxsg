@@ -1,0 +1,61 @@
+h2.header-3.text-center Day 3
+h3.header-4.text-center 3 Oct 2014
+
+table.programme
+  tbody
+    tr
+      th.time 8:00 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast
+    tr
+      th.time 9:30 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-keynote.png"
+          .programme--details
+            .programme--category Lightning Talks A
+            .programme--title-list
+              ul
+                - @day_3.where(happens_at: Time.new(2014, 10, 3, 9, 30, 0, 0)).each do |programme|
+                  li = link_to programme.title, programme
+    tr
+      th.time 10:30 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast
+    tr
+      th.time 11:00 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-keynote.png"
+          .programme--details
+            .programme--category Lightning Talks B
+            .programme--title-list
+              ul
+                - @day_3.where(happens_at: Time.new(2014, 10, 3, 11, 0, 0, 0)).each do |programme|
+                  li = link_to programme.title, programme
+    tr
+      th.time 12:00 pm
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-lunch.png"
+          .programme--details.middle-align
+            .programme--title Lunch
+    tr
+      th.time 2:00 pm
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_3.find_by(happens_at: Time.new(2014, 10, 3, 14, 0, 0, 0)) }
+    tr
+      th.time 3:30 pm
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Afternoon Break
+    tr
+      th.time 4:00 pm
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_3.find_by(happens_at: Time.new(2014, 10, 3, 16, 00, 0, 0)) }

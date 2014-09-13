@@ -1,0 +1,56 @@
+h2.header-3.text-center Day 1
+h3.header-4.text-center 1 Oct 2014
+
+table.programme
+  tbody
+    tr
+      th.time 8:00 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast & Registration
+    tr
+      th.time 9:30 am
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_1.find_by(happens_at: Time.new(2014, 10, 1, 9, 30, 0, 0)) }
+    tr
+      th.time 10:30 am
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-cup.png"
+          .programme--details.middle-align
+            .programme--title Breakfast
+    tr
+      th.time 11:00 am
+      td = render partial: "programmes/programme_tile", locals: { programme: @day_1.find_by(happens_at: Time.new(2014, 10, 1, 11, 0, 0, 0)) }
+    tr
+      th.time 12:00 pm
+      td
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-lunch.png"
+          .programme--details.middle-align
+            .programme--title Lunch
+    tr
+      th.time 2:00 pm
+      td.programme-timeline-workshops
+        .programme-timeline-workshops
+          p Choose one industry track:
+          - IndustryTrack.all.order(name: :asc).each do |track|
+            - if track.programmes.any?
+              .programme-timeline-tile style="margin-bottom: 1rem;"
+                .programme--icon = image_tag "icon-workshop.png"
+                .programme--details
+                  .programme--category = track.name
+                  - track.programmes.each do |programme|
+                    - if programme.happens_at.to_date == Date.new(2014, 10, 1)
+                      = render partial: "programmes/programme_workshop_tile", locals: { programme: programme, industry: true }
+          p OR choose one practitioner workshop:
+    tr
+      th.time 3:30 pm
+      td.programme-timeline-workshops
+        .programme-timeline-tile
+          .programme--icon = image_tag "icon-workshop.png"
+          .programme--details
+            .programme--category Workshops &ndash; Select One
+            - @day_1.where(happens_at: Time.new(2014, 10, 1, 14, 0, 0, 0), industry_track_id: nil).each do |programme|
+              = render partial: "programmes/programme_workshop_tile", locals: { programme: programme }
