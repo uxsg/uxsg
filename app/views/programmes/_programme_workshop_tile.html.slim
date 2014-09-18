@@ -6,3 +6,5 @@
     ' By
     - speaker_links = programme.speakers.map { |s| link_to s.name, s }
     == speaker_links.to_sentence
+  - if programme.sold_out
+    .programme--availability Workshop is full!
