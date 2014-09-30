@@ -35,6 +35,7 @@ class Programme < ActiveRecord::Base
       field :description, :wysihtml5
       field :speakers
       field :sold_out
+      field :slideshare_id
     end
   end
 end
