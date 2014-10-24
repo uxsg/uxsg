@@ -20,6 +20,10 @@ header.header.with-category
     - @programme.speakers.each do |speaker|
       .medium-4.columns.end
         = render partial: "speakers/tile", locals: { speaker: speaker }
+  - if @programme.vimeo_id.present?
+    .row
+      .medium-12.columns
+        iframe src="http://player.vimeo.com/video/#{@programme.vimeo_id}" width="100%" height="596" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"
   - if @programme.slideshare_id.present?
     .row
       .medium-12.columns
