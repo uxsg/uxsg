@@ -37,6 +37,7 @@ class Programme < ActiveRecord::Base
       field :sold_out
       field :slideshare_id
       field :vimeo_id
+      field :flickr_url
     end
   end
 end

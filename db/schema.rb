@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022213832) do
+ActiveRecord::Schema.define(version: 20141024193752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 20141022213832) do
     t.boolean  "sold_out"
     t.string   "slideshare_id"
     t.string   "vimeo_id"
+    t.string   "flickr_url"
   end
 
   add_index "programmes", ["speaker_id"], name: "index_programmes_on_speaker_id", using: :btree
