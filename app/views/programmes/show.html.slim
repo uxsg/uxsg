@@ -20,8 +20,17 @@ header.header.with-category
     - @programme.speakers.each do |speaker|
       .medium-4.columns.end
         = render partial: "speakers/tile", locals: { speaker: speaker }
+  - if @programme.vimeo_id.present?
+    .row
+      .medium-12.columns
+        iframe src="http://player.vimeo.com/video/#{@programme.vimeo_id}" width="100%" height="596" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"
   - if @programme.slideshare_id.present?
     .row
       .medium-12.columns
         h3.header-3 Presentation Slides
         iframe src="http://www.slideshare.net/slideshow/embed_code/#{@programme.slideshare_id}" width="100%" height="620" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen=true webkitallowfullscreen=true mozallowfullscreen=true
+  - if @programme.flickr_url.present?
+    .row
+      .medium-12.columns
+        h3.header-3 Photos
+        = flickr_album(@programme)
